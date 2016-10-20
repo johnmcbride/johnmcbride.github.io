@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>John McBride</title>
+		<description>Ramblings from a Technology Evangelist/Developer Advocate with a focus on development</description>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Introduction to the Citrix Developer extension for Visual Studio</title>
+				<description>&lt;p&gt;We are working on some updates to the Citrix Developer extension for Visual Studio to include some additional 
+samples and in lieu of those updates I wanted to repost our introduction video I put together that goes over the 
+extension.&lt;/p&gt;
+
+&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;    &lt;iframe title=&quot;YouTube video player&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;//www.youtube.com/embed/Z52wet-18mA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+</description>
+				<pubDate>Sat, 06 Feb 2016 00:00:00 -0500</pubDate>
+				<link>/2016/02/06/03-31-09.html</link>
+				<guid isPermaLink="true">/2016/02/06/03-31-09.html</guid>
+			</item>
+		
+			<item>
+				<title>dev:snack YouTube series - Octoblu and Visual Studio</title>
+				<description>&lt;p&gt;In this Dev:snack edition, we highligh some of the new features we have included in the Citrix Developer Extension
+for Visual Studio that target the Citrix Octoblu platform. We go over items like new samples and some additional
+tool windows that are included to help you work with Octoblu.you would like to see.&lt;/p&gt;
+
+&lt;p&gt;Check out the video below.&lt;/p&gt;
+
+&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;    &lt;iframe title=&quot;YouTube video player&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;//www.youtube.com/embed/uUEsdVSKe6U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+</description>
+				<pubDate>Sun, 29 Nov 2015 00:00:00 -0500</pubDate>
+				<link>/2015/11/29/03-31-07-02.html</link>
+				<guid isPermaLink="true">/2015/11/29/03-31-07-02.html</guid>
+			</item>
+		
+			<item>
+				<title>Developer YouTube series - bite sized snacks of developer information</title>
+				<description>&lt;p&gt;I’m starting to post little videos focused on interesting developer information titled Dev:snack. 
+Each one of these videos will highlight some interesting developer feature/information that I’m currently 
+working on or just find interesting. The current set of videos is more targeted on some of the software I’m working 
+on in my day job as a Developer Advocate at Citrix here in Fort Lauderdale. I’m always interested in your feedback 
+so reach out and let me know if you like the format and what you would like to see.&lt;/p&gt;
+
+&lt;p&gt;Below are the first few videos, more will be coming soon.&lt;/p&gt;
+
+&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;    &lt;iframe title=&quot;YouTube video player&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;//www.youtube.com/embed/O9XyXZvAlXs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+</description>
+				<pubDate>Sun, 29 Nov 2015 00:00:00 -0500</pubDate>
+				<link>/2015/11/29/03-31-07-01.html</link>
+				<guid isPermaLink="true">/2015/11/29/03-31-07-01.html</guid>
+			</item>
+		
+			<item>
+				<title>VS Extension to reset the Experimental Visual Studio Instance</title>
+				<description>&lt;p&gt;In developing some extensions I grew increasing tired of having to manually reset the experimental instance of 
+Visual Studio. You typically do this by deleting the required files in the AppData directory as well as the “Exp” 
+key in the registry.&lt;/p&gt;
+
+&lt;p&gt;Having to do this multiple times during some testing I wrote an extension and open sourced it that cleanly resets 
+the experimental install of visual studio.&lt;/p&gt;
+
+&lt;p&gt;You can grab the extension on the Visual Studio Gallery &lt;a href=&quot;https://visualstudiogallery.msdn.microsoft.com/70cf0f85-0c8e-4970-87d3-d0fc4bcb9a01&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you would like to follow the source on Github, check out &lt;a href=&quot;https://github.com/johnmcbride/CleanHiveAndDebugExtension&quot;&gt;project here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/cleanhiveproject.png&quot; alt=&quot;Project Image&quot; /&gt;&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 24 Nov 2015 00:00:00 -0500</pubDate>
+				<link>/2015/11/24/03-52-08.html</link>
+				<guid isPermaLink="true">/2015/11/24/03-52-08.html</guid>
+			</item>
+		
+			<item>
+				<title>Live coding sesssion - Octoblu/Citrix and .NET</title>
+				<description>&lt;p&gt;We’ve recently added some new updates to the Citrix Developer Extension for Visual Studio to show off some of the 
+feature of the Citrix Octoblu platform. To show off show of the features I put together this Live Coding session to 
+show how to build a sample app that registers an application with meshblu using the meshblu API and building a 
+workflow to send message to that application via web sockets, all with .NET. You can get more information on the 
+&lt;a href=&quot;https://visualstudiogallery.msdn.microsoft.com/6587c715-fff3-4e2b-bf7f-10331840c552&quot;&gt;Citrix Developer Extension for Visual Studio here&lt;/a&gt;&lt;/p&gt;
+
+&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;    &lt;iframe title=&quot;YouTube video player&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;//www.youtube.com/embed/eT92moezKic&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+				<pubDate>Sun, 22 Nov 2015 00:00:00 -0500</pubDate>
+				<link>/2015/11/22/01-39-33.html</link>
+				<guid isPermaLink="true">/2015/11/22/01-39-33.html</guid>
+			</item>
+		
+			<item>
+				<title>Simple C# app that uses the Citrix Netscaler C# SDK</title>
+				<description>&lt;p&gt;I recently pushed up the 10.0 and 10.1 versions of the Citrix Netscaler C# SDK to nuget. I was browsing 
+around and noticed that the C# SDK for Citrix Netscaler wasnt really getting any love on the inner-webs so 
+I thought I would put just a very simple code snippet together that shows how to perform a login to the 
+netscaler appliance and then list any virtual servers (load balanced) that are configured.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Citrix Netscaler nitro namespaces
+using com.citrix.netscaler.nitro.service;
+using com.citrix.netscaler.nitro.resource.config.lb;
+
+namespace NetscalerSDKShowcase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string _username = &amp;quot;nsroot&amp;quot;;
+            string _password = &amp;quot;password&amp;quot;;
+            string _serverip = &amp;quot;10.10.10.10.&amp;quot;;
+
+            //define the Netscaler Nitro Service Object
+            nitro_service _nsService = new nitro_service(_serverip);
+            //Perform login to the appliance
+            try
+            {
+                _nsService.login(_username, _password);
+
+
+                foreach (lbvserver lbserver in lbvserver.get(_nsService))
+                {
+                    Console.WriteLine(string.Format(&amp;quot;Name:{0},Ip:{1},State:{3}&amp;quot;, lbserver.name, lbserver.ipv46, lbserver.state));
+                }
+            }
+            catch ( Exception LoginError)
+            {
+                Console.Error.WriteLine(&amp;quot;Unable to authenticate to the netscaler appliance. Please try again.&amp;quot;);
+            }
+        }
+    }
+}
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/johnmcbride/6002501.js&quot;&gt; &lt;/script&gt;
+
+</description>
+				<pubDate>Mon, 15 Jul 2013 00:00:00 -0400</pubDate>
+				<link>/2013/07/15/20-11-52.html</link>
+				<guid isPermaLink="true">/2013/07/15/20-11-52.html</guid>
+			</item>
+		
+			<item>
+				<title>XAML layout for an arrow image</title>
+				<description>&lt;p&gt;I was messing around with some XAML code today and thought it would be fun to try and make an image with pure XAML. 
+It’s probably not the best but it’s just a simple little arrow. If you know of a better way 
+,with XAML that is, please leave a comment.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;Path Stroke=&amp;quot;Black&amp;quot; Fill=&amp;quot;Green&amp;quot;&amp;gt;
+   &amp;lt;Path.Data&amp;gt;
+    &amp;lt;PathGeometry&amp;gt;
+      &amp;lt;PathFigure StartPoint=&amp;quot;0,0&amp;quot; IsClosed=&amp;quot;True&amp;quot; IsFilled=&amp;quot;True&amp;quot;&amp;gt;
+      &amp;lt;PathFigure.Segments&amp;gt;
+        &amp;lt;PathSegmentCollection&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;100,0&amp;quot; /&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;100,-20&amp;quot; /&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;140,10&amp;quot; /&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;100,40&amp;quot; /&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;100,20&amp;quot; /&amp;gt;
+          &amp;lt;LineSegment Point=&amp;quot;0,20&amp;quot; /&amp;gt;
+        &amp;lt;/PathSegmentCollection&amp;gt;
+      &amp;lt;/PathFigure.Segments&amp;gt;
+      &amp;lt;/PathFigure&amp;gt;
+    &amp;lt;/PathGeometry&amp;gt;
+   &amp;lt;/Path.Data&amp;gt;
+ &amp;lt;/Path&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/johnmcbride/4289029.js&quot;&gt; &lt;/script&gt;
+
+</description>
+				<pubDate>Fri, 14 Dec 2012 00:00:00 -0500</pubDate>
+				<link>/2012/12/14/22-13-57.html</link>
+				<guid isPermaLink="true">/2012/12/14/22-13-57.html</guid>
+			</item>
+		
+			<item>
+				<title>Quick C# method to validate a Citrix XenServer login</title>
+				<description>&lt;p&gt;Below is a quick C# method for validating a XenServer API login, give the server name/IP address, username and 
+password using the XenServer .Net SDK.&lt;/p&gt;
+
+&lt;p&gt;If you need the XenServer .NET SDK you can get it from the nuget.org package system 
+within visual studio by searching for XenServer or by clicking on the &lt;a href=&quot;http://www.nuget.org/packages/CitrixXenServer61SDK&quot;&gt;direct link&lt;/a&gt;&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/4253400.js&quot;&gt; &lt;/script&gt;
+
+</description>
+				<pubDate>Mon, 10 Dec 2012 00:00:00 -0500</pubDate>
+				<link>/2012/12/10/21-10-09.html</link>
+				<guid isPermaLink="true">/2012/12/10/21-10-09.html</guid>
+			</item>
+		
+			<item>
+				<title>Setting Content-Type header for an HTTP Post in Win8 Store App</title>
+				<description>&lt;p&gt;&amp;lt;In a recent project I was playing around with a Windows 8 Store app (formally known as Metro) and needed to 
+POST some info to an REST based endpoint. The issue was I needed to set the Content-Type header to application/json 
+to the API knew how to serialize the incoming data.  Having not used the HttpClient object recently it took a little 
+research to find how to set the Content-Type header. Its turns out this is pretty easy. Basically every HttpContent 
+object has a .Headers property, which contains a property for most of the popular https headers, Content-Type being 
+the one I was most interested in.&lt;/p&gt;
+
+&lt;p&gt;So how do you set it? It turns out that for any header property that you want to set, you use the MediaTypeHeaderValue 
+object and pass in the value you want.&lt;/p&gt;
+
+&lt;p&gt;For example&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContentType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaTypeHeaderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;application/json&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;would set the Content-Type header value to be “application/json”.&lt;/p&gt;
+
+&lt;p&gt;Below is a more complete example of how to set the Content-Type header along with creating content for the 
+body of the post, etc.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://[Your POST api method]&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//define that we are the body of the post will be string content. In our care&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//if will be JSON&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;HttpContent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{field1:&amp;#39;myvalue&amp;#39;,field2:&amp;#39;field2&amp;#39;}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//set the content type header to be &amp;quot;application/json&amp;quot;. We do this by setting the&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//content-type property to application/json by initializing a new object called&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//MediaTypeHeaderValue and passing what value we want to set the content-type header to be.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContentType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaTypeHeaderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;application/json&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//init the httpclient&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_client&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//post the data to the API. Note for Win8, we are using the async/await paradigme&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//so as not to block the ui thread.&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_resp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PostAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//get the response from the api. In our case we assume that the data coming back will be string&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Note for Win8, we are using the async/await paradigme&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//so as not to block the ui thread.&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReadAsStringAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+				<pubDate>Wed, 07 Nov 2012 00:00:00 -0500</pubDate>
+				<link>/2012/11/07/16-02-45.html</link>
+				<guid isPermaLink="true">/2012/11/07/16-02-45.html</guid>
+			</item>
+		
+			<item>
+				<title>HOW TO- Convert .pem file to a .der file with OpenSSL</title>
+				<description>&lt;p&gt;Recently I have the need to convert an SSL cert I retrieved from a Citrix NetScaler device from the 
+native format, .pem, into a format that was more digestible to Windows Server. In order to do this you’ll 
+need the OpenSSL library for windows. You can find it at &lt;a href=&quot;http://slproweb.com/products/Win32OpenSSL.html&quot;&gt;http://slproweb.com/products/Win32OpenSSL.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have it installed, make sure you run the following command to setup the config file in your 
+command prompt. Remember to replace the [openssl install directory] with the location you installed OpenSSL
+“set OPENSSL_CONF=c:[openssl install directory]binopenssl.cfg”  Once you have all that set you can run the 
+following command to convert the .pem file to a .der file “openssl x509 –in [your pem file].pem –out [full path and filename of the file you want to create].der –outform DER”&lt;/p&gt;
+
+&lt;p&gt;This will convert your .pem file to a .der file which you can now import into a Windows Server.&lt;/p&gt;
+
+&lt;p&gt;Hope this helps.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 26 Jul 2012 00:00:00 -0400</pubDate>
+				<link>/2012/07/26/21-10-40.html</link>
+				<guid isPermaLink="true">/2012/07/26/21-10-40.html</guid>
+			</item>
+		
+	</channel>
+</rss>

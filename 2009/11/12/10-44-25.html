@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX Minifier and a tool to view the output</title>
+	
+	<meta name="author" content="John McBride">
+
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/johnmcbride">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/johnmcbride">
+				<i class="fa fa-twitter"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				John McBride
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
+
+	<div class="col-sm-3 sidebar hidden-xs" style="">
+		<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!-- <img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" /> -->
+		<img src="/images/headers/blog_header.png" class="img-circle"/>
+	</a>
+	<h3 class="title">
+        <a href="/">John McBride</a>
+    </h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/johnmcbride">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/johnmcbride">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/jpmcbride">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+	 
+</div>
+<div>
+	<nav class="sidebar-nav">
+      <a class="page-nav-link" href="/">Home</a>
+      
+
+      
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/about.html">About Me</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/categories.html">Categories</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/contact.html">Contact</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/resume.html">My Work</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/tags.html">Tags</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+    </nav>
+</div>
+<!-- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>AJAX Minifier and a tool to view the output </h1>
+</div>
+<article>
+	
+</ul>
+	<div class="col-sm-10">
+		<ul class="tags">
+  
+</ul>
+	 <span class="post-date">
+	   
+	   November 
+	   12th,
+	   
+	   2009
+		 
+	 </span>
+	 
+	  <div class="article_body">
+	  <div style="padding-bottom: 0px; padding-left: 0px; width: 181px; padding-right: 0px; display: block; float: none; margin-left: auto; margin-right: auto; padding-top: 0px" id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:fcf195c6-1908-48ef-beaf-11f6ce7e20f0" class="wlWriterEditableSmartContent"><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/MinViewer8x6.png" title="Ajax Minifier Viewer" rel="thumbnail"><img border="0" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/MinViewer.png" width="171" height="158" /></a></div>
+<p><a href="http://www.sharepoint-stuff.com/downloads/AjaxMinifierViewer.zip" target="_blank">Download the application here</a></p>
+<p>Recently the the Microsoft AJAX team released Ajax Preview 6 up on codeplex (<a href="http://aspnet.codeplex.com/wikipage?title=AJAX&amp;referringTitle=Home" target="_blank">Check it out here</a>). With this release they also released an Ajax Minifier tool that will allow you to crunch or minify JS files. There are several ways to use the minifier tool, you can incorporate in into your build process using msbuild, you could run command line tool manually and create an output file, or you can use the minifier dll that gets distributed with the tool in your own applications. It is this third option that sparked my interest so I thought I would whip an application that allows you to load Javascript into an editor and then “crunch” it with the Ajax minifier object and visually see the output. Below is a screen shot of the final output. (I am adding a settings option so you can control how the minifier works)</p>
+<p>&#160;</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image_thumb.png" width="867" height="686" /></a> </p>
+<p>If you just want to grab the zip fie that has the exe in it to run, <a href="http://www.sharepoint-stuff.com/downloads/AjaxMinifierViewer.zip" target="_blank">you can grab it from here</a>. </p>
+<p>The first thing we will need to do is grab and install the Ajax Minifier <a href="http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34488" target="_blank">from here</a>. Once installed you will find the ajaxmin.dll file in the install location, like the following. It is that file that contains all the “crunching” code and the file you will need to reference in your project.</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image1.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image_thumb1.png" width="392" height="243" /></a> </p>
+<p>Once you have referenced the ajaxmin.dll file in your solution you will be able to “crunch” some javascript. In order to “crunch” the javascript you will need to make a call like the following.</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:0bf8de87-2099-4f07-9ad8-1c851a64b3c7" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px">Code Snippet</div> <div style="background: #ddd; max-height: 300px; overflow: auto"> <ol style="background: #ffffff; margin: 0 0 0 2em; padding: 0 0 0 5px;"> <li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#0000ff">string</span> Js = <span style="color:#a31515">@&quot;function ()</span></li> <li style="background: #f3f3f3">{</li> <li>&#160;&#160;&#160;&#160;<span style="color:#a31515">//these are some javascript comments</span></li> <li style="background: #f3f3f3">&#160;&#160;&#160;&#160;<span style="color:#a31515">var testVar = &#39;this is some alert text&#39;;</span></li> <li>&#160;&#160;&#160;&#160;<span style="color:#a31515">alert(&#39;Hey What are you doing!!!!, Crunch this stuff.....&#39;);</span></li> <li style="background: #f3f3f3">}<span style="color:#a31515">&quot;</span>;</li> <li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Microsoft.Ajax.Utilities.<span style="color:#2b91af">ScriptCruncher</span> sc = <span style="color:#0000ff">new</span> Microsoft.Ajax.Utilities.<span style="color:#2b91af">ScriptCruncher</span>();</li> <li style="background: #f3f3f3">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#0000ff">string</span> CrunchedJS = sc.Crunch(Js);</li> </ol> </div> </div> </div>
+<p>&#160;</p>
+<p>I also want to give credit to the #develop guys over at ic#code for putting out a excellent open source IDE for .NET development. I am using the #develop’s&#160; code editor control in this project to obtain the syntax highlighting, etc. Great work guys!! </p>
+<p>you can check them out over at <a href="http://www.icsharpcode.net/OpenSource/SD/">http://www.icsharpcode.net/OpenSource/SD/</a></p>
+<p>&#160;</p>
+<p>That’s it for now and as always if you have any comments or questions you can comment here at the blog or catch me on twitter at <a href="http://twitter.com/johnmcbride">http://twitter.com/johnmcbride</a></p>
+
+	  </div>
+
+		  
+
+		  
+
+		<hr>
+
+		<div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=AJAX Minifier and a tool to view the output&via=johnmcbride"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter fa-lg"></i>
+          Twitter
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="http://www.gravatar.com/avatar/" class="img-rounded author-image" />
+        <h4 class="section-title author-name">John McBride</h4>
+        <p class="author-bio">A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+		<ul class="pager">
+		  
+		  <li class="previous"><a href="/2009/08/18/11-08-56.html" title="iPhone and XenServer Managment, There is an app for THAT!, and it’s called Xeni">&larr; Previous</a></li>
+		  
+		  
+		  <li class="next"><a href="/2009/12/17/15-43-33.html" title="WorkFlow Studio 2.0 Development and Cached Activities (A Utility to clear them up)">Next &rarr;</a></li>
+		  
+		</ul>
+
+		<hr>
+	</div>
+	
+	<div class="col-sm-2 sidebar-2">
+	
+	</div>
+</article>
+<div class="clearfix"></div>
+
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'johnmcbride.me', 'auto');
+  ga('send', 'pageview');
+</script>
+

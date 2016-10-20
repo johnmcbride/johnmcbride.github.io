@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ramblings from a developer</title>
+	
+	<meta name="author" content="John McBride">
+
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/johnmcbride">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/johnmcbride">
+				<i class="fa fa-twitter"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				John McBride
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
+
+	<div class="col-sm-3 sidebar hidden-xs" style="">
+		<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!-- <img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" /> -->
+		<img src="/images/headers/blog_header.png" class="img-circle"/>
+	</a>
+	<h3 class="title">
+        <a href="/">John McBride</a>
+    </h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/johnmcbride">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/johnmcbride">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/jpmcbride">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+	 
+</div>
+<div>
+	<nav class="sidebar-nav">
+      <a class="page-nav-link" href="/">Home</a>
+      
+
+      
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/about.html">About Me</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/categories.html">Categories</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/contact.html">Contact</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/resume.html">My Work</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/tags.html">Tags</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+    </nav>
+</div>
+<!-- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>Ramblings from a developer </h1>
+</div>
+
+
+
+<article class="home">
+<ul class="tags">
+  
+    <li><a href="/tags.html#citrix-ref" class="tag">citrix</a></li>
+  
+    <li><a href="/tags.html#developer-ref" class="tag">developer</a></li>
+  
+    <li><a href="/tags.html#SDK-ref" class="tag">SDK</a></li>
+  
+</ul>
+  <span class="post-date">
+    
+    February
+    6th,
+    
+    2016
+  </span>
+
+  <h2>
+    <a href="/2016/02/06/03-31-09.html">Introduction to the Citrix Developer extension for Visual Studio</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>We are working on some updates to the Citrix Developer extension for Visual Studio to include some additional 
+samples and in lieu of those updates I wanted to repost our introduction video I put together that goes over the 
+extension.</p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/Z52wet-18mA" frameborder="0" allowfullscreen=""></iframe></div>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+    <li><a href="/tags.html#Citrix-ref" class="tag">Citrix</a></li>
+  
+    <li><a href="/tags.html#YouTube-ref" class="tag">YouTube</a></li>
+  
+    <li><a href="/tags.html#Developer-ref" class="tag">Developer</a></li>
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    29th,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/29/03-31-07-02.html">dev:snack YouTube series - Octoblu and Visual Studio</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>In this Dev:snack edition, we highligh some of the new features we have included in the Citrix Developer Extension
+for Visual Studio that target the Citrix Octoblu platform. We go over items like new samples and some additional
+tool windows that are included to help you work with Octoblu.you would like to see.</p>
+
+<p>Check out the video below.</p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/uUEsdVSKe6U" frameborder="0" allowfullscreen=""></iframe></div>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+    <li><a href="/tags.html#Citrix-ref" class="tag">Citrix</a></li>
+  
+    <li><a href="/tags.html#YouTube-ref" class="tag">YouTube</a></li>
+  
+    <li><a href="/tags.html#Developer-ref" class="tag">Developer</a></li>
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    29th,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/29/03-31-07-01.html">Developer YouTube series - bite sized snacks of developer information</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>I’m starting to post little videos focused on interesting developer information titled Dev:snack. 
+Each one of these videos will highlight some interesting developer feature/information that I’m currently 
+working on or just find interesting. The current set of videos is more targeted on some of the software I’m working 
+on in my day job as a Developer Advocate at Citrix here in Fort Lauderdale. I’m always interested in your feedback 
+so reach out and let me know if you like the format and what you would like to see.</p>
+
+<p>Below are the first few videos, more will be coming soon.</p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/O9XyXZvAlXs" frameborder="0" allowfullscreen=""></iframe></div>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    24th,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/24/03-52-08.html">VS Extension to reset the Experimental Visual Studio Instance</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>In developing some extensions I grew increasing tired of having to manually reset the experimental instance of 
+Visual Studio. You typically do this by deleting the required files in the AppData directory as well as the “Exp” 
+key in the registry.</p>
+
+<p>Having to do this multiple times during some testing I wrote an extension and open sourced it that cleanly resets 
+the experimental install of visual studio.</p>
+
+<p>You can grab the extension on the Visual Studio Gallery <a href="https://visualstudiogallery.msdn.microsoft.com/70cf0f85-0c8e-4970-87d3-d0fc4bcb9a01">here</a></p>
+
+<p>If you would like to follow the source on Github, check out <a href="https://github.com/johnmcbride/CleanHiveAndDebugExtension">project here</a></p>
+
+<p><img src="images/cleanhiveproject.png" alt="Project Image" /></p>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    22nd,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/22/01-39-33.html">Live coding sesssion - Octoblu/Citrix and .NET</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>We’ve recently added some new updates to the Citrix Developer Extension for Visual Studio to show off some of the 
+feature of the Citrix Octoblu platform. To show off show of the features I put together this Live Coding session to 
+show how to build a sample app that registers an application with meshblu using the meshblu API and building a 
+workflow to send message to that application via web sockets, all with .NET. You can get more information on the 
+<a href="https://visualstudiogallery.msdn.microsoft.com/6587c715-fff3-4e2b-bf7f-10331840c552">Citrix Developer Extension for Visual Studio here</a></p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/eT92moezKic" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p> </p>
+
+    
+    
+  </div>
+
+</article>
+
+<hr/>
+
+<ul class="pager"> 
+
+  
+  <li class="previous disabled">
+    <a>&larr; Newer</a>
+  </li>
+  
+  
+  <li>
+    <span class="page_number">Page: 1 of 19</span>
+  </li>
+
+  
+  <li class="next">
+    <a href="/page2">Older &rarr;</a>
+  </li>
+  
+
+</ul>
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'johnmcbride.me', 'auto');
+  ga('send', 'pageview');
+</script>
+

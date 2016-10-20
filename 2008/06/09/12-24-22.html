@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>To object model or to web service that is the question, SharePoint that is (In Windows PowerShell).</title>
+	
+	<meta name="author" content="John McBride">
+
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/johnmcbride">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/johnmcbride">
+				<i class="fa fa-twitter"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				John McBride
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
+
+	<div class="col-sm-3 sidebar hidden-xs" style="">
+		<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!-- <img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" /> -->
+		<img src="/images/headers/blog_header.png" class="img-circle"/>
+	</a>
+	<h3 class="title">
+        <a href="/">John McBride</a>
+    </h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/johnmcbride">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/johnmcbride">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/jpmcbride">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+	 
+</div>
+<div>
+	<nav class="sidebar-nav">
+      <a class="page-nav-link" href="/">Home</a>
+      
+
+      
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/about.html">About Me</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/categories.html">Categories</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/contact.html">Contact</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/resume.html">My Work</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/tags.html">Tags</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+    </nav>
+</div>
+<!-- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>To object model or to web service that is the question, SharePoint that is (In Windows PowerShell). </h1>
+</div>
+<article>
+	
+</ul>
+	<div class="col-sm-10">
+		<ul class="tags">
+  
+</ul>
+	 <span class="post-date">
+	   
+	   June 
+	   9th,
+	   
+	   2008
+		 
+	 </span>
+	 
+	  <div class="article_body">
+	  <p>While utilizing the SharePoint object model (Microsoft.Sharepoint.dll) is a powerful mechanism for doing administration and custom development tasks, anything you write that uses it needs to run on the server hosting WSS or MOSS. This typically includes webparts which, in general, is not a big deal since they have to be installed there anyway's. Admin utilities, on the other hand, are typically where using the OM it starts to become a pain (just ask any server admin to give somebody server/console access because they have to run a certain tool and you will start to see the problems that this might conjure up). But don’t worry, its SharePoint web services to the rescue. By using the SharePoint web services, we can start to develop some admin utility's that we can use for remote SharePoint installations. This multi part post will be about using windows powershell and the SharePoint web services to create a small admin utility for SharePoint administration.</p>
+<p>So let’s get started!!!</p>
+<p>The first step in this process is creating the web service stubs. You can do this two ways. The first way is to use visual studio and add a web reference, but since this is a post about powershell, we wont focus on that. The second way is to create the stubs using the wsdl.exe to generate a CS wrapper file and csc.exe command to compile that wrapper source file into a .NET DLL.</p>
+<p>For example assuming your SharePoint server name is goofy (Yes, I am a Disney fanatic), and you want to generate a C# file from the WSDL definition you would run the following commands.</p>
+<p>WSDL.exe <a href="http://goofy/_vti_bin/Alerts.asmc?wsdl">http://goofy/_vti_bin/Alerts.asmc?wsdl</a> /out:c:johnalerts.cs (This generates the source file)     <br />csc /type:library /out:c:john.alerts.dll c:johnalerts.cs (This will generate a .NET dll wrapper that you can now use in a .NET application). This process has to be done for each web service you want to talk to.</p>
+<p>Since this is a pretty repetitive task, you might be thinking, “Hey,create a script for that!”, so thats exactly what happened. Here is a powershell script auto generates the stub DLL’s. (It also creates the admin site dll’s for use in your projects as well).    <br />There parameters for the script are (or you can just run it from powershell, and it will prompt you)     <br />-CSCCompilerLocation Location of the CSharp Compiler     <br />-WSDLLocation Location of the WSDL.EXE application     <br />-OutputLocation Output File Location     <br />-SharePointServerName Name of your sharepoint server     <br />-SharePointAdminPort Admin port of your sharepoint server</p>
+<p>Here is a short video to show this in process.</p>
+<div>   <div><span style="border-right: navy 1px solid; padding-right: 2px; border-top: navy 1px solid; padding-left: 2px; font-size: 16px; padding-bottom: 2px; border-left: navy 1px solid; cursor: hand; color: navy; padding-top: 2px; border-bottom: navy 1px solid; font-family: tahoma; background-color: #ddd5ca" onclick="javascript:this.parentElement.parentElement.children[1].style.display = &#39;&#39;;this.parentElement.parentElement.children[2].style.display = &#39;none&#39;;">Video</span> <span style="border-right: navy 1px solid; padding-right: 2px; border-top: navy 1px solid; padding-left: 2px; font-size: 16px; padding-bottom: 2px; border-left: navy 1px solid; cursor: hand; color: navy; padding-top: 2px; border-bottom: navy 1px solid; font-family: tahoma; background-color: #ddd5ca" onclick="javascript:this.parentElement.parentElement.children[2].style.display = &#39;&#39;;this.parentElement.parentElement.children[1].style.display = &#39;none&#39;; ">Code</span> <span style="border-right: navy 1px solid; padding-right: 2px; border-top: navy 1px solid; padding-left: 2px; font-size: 16px; padding-bottom: 2px; border-left: navy 1px solid; cursor: hand; color: navy; padding-top: 2px; border-bottom: navy 1px solid; font-family: tahoma; background-color: #ddd5ca" onclick="javascript:window.open('http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/createsharepointwrappers.ps1');">Download Script</span>  </div>    <div id="video" style="display: visible">[flashvideo filename="/wp-content/uploads/2008/06/wrapperdemo.flv" image="/wp-content/uploads/2008/06/pspoweringsp.jpg" height="500" width="800" /]</div>    <div style="display: none">     <pre lang="csharp">param(
+[string] $CSCCompilerLocation = $(Read-Host &quot;Enter CSC.exe location `n[Enter for default location of 'C:WindowsMicrosoft.NETFrameworkv2.0.50727csc.exe']&quot;),
+[string] $WSDLLocation = $(Read-Host &quot;`nEnter WSDL.exe location `n[Enter for default location of 'C:Program FilesMicrosoft.NETSDKv2.0 64bitBinwsdl.exe']&quot;),
+[string] $OutputLocation = $(Read-Host &quot;`nEnter location for output files [Enter for default location of 'C:SHAREPOINTSTUFF']&quot;),
+[string] $SharePointServerName = $(Read-Host &quot;`nEnter the sharepoint server name [Enter for default location of 'localhost']&quot;),
+[int] $SharePointAdminPort = $(Read-Host &quot;`nEnter the sharepoint admin port #&quot;),
+[string] $SharePointSite = $(Read-Host &quot;`nEnter a sharepoint site (Ex. http://goofy/site/HR).`n[Enter to cancel the generation of site DLL's and only create the admin wrappers]&quot;),
+[string] $Language = $(Read-Host &quot;`nEnter the source file language (CS or VB)`n[Enter for CSharp source files]&quot;),
+[string] $DeleteCheck = $(Read-Host &quot;`nAny files located in the output directory will be deleted. Please type OK to continue.&quot;)
+)
+$DeleteCheck = $DeleteCheck.ToUpper()
+if ( $DeleteCheck -ne &quot;OK&quot; )
+{
+	exit
+}
+
+if ( $CSCCompilerLocation -eq &quot;&quot;)
+{
+	$CSCCompilerLocation = &quot;C:WindowsMicrosoft.NETFrameworkv2.0.50727csc.exe&quot;
+}
+
+if ( $WSDLLocation -eq &quot;&quot;)
+{
+	$WSDLLocation = &quot;C:Program FilesMicrosoft.NETSDKv2.0 64bitBinwsdl.exe&quot;
+}
+
+if ( $OutputLocation -eq &quot;&quot;)
+{
+	$OutputLocation = &quot;C:SHAREPOINTSTUFF&quot;
+}
+
+if ( $SharePointServerName -eq &quot;&quot;)
+{
+	$SharePointServerName = &quot;LOCALHOST&quot;
+}
+
+if ( $SharePointAdminPort -eq &quot;&quot;)
+{
+	$SharePointAdminPort = &quot;11111&quot;
+}
+if ( $Language -eq &quot;&quot;)
+{
+	$Language = &quot;CS&quot;
+}
+else
+{
+	$Language = $Language.ToUpper()
+}
+if ( $SharePointSite -ne &quot;&quot; )
+{
+	if ( $SharePointSite.Substring($SharePointSite.Length - 1,1) -ne &quot;/&quot; )
+	{
+		$SharePointSite = $SharePointSite + &quot;/&quot;
+	}
+
+}
+
+#Creating an array al the sharepoint web service files. These will be used later on when
+#we construct the URL to create the WSDL file.
+$SharepointWebServiceList = &quot;alerts.asmx&quot;,
+&quot;authentication.asmx&quot;,
+&quot;copy.asmx&quot;,
+&quot;dws.asmx&quot;,
+&quot;forms.asmx&quot;,
+&quot;imaging.asmx&quot;,
+&quot;dspsts.asmx&quot;,
+&quot;lists.asmx&quot;,
+&quot;meetings.asmx&quot;,
+&quot;people.asmx&quot;,
+&quot;permissions.asmx&quot;,
+&quot;sharepointemailws.asmx&quot;,
+&quot;sitedata.asmx&quot;,
+&quot;sites.asmx&quot;,
+&quot;spsearch.asmx&quot;,
+&quot;usergroup.asmx&quot;,
+&quot;versions.asmx&quot;,
+&quot;views.asmx&quot;,
+&quot;webpartpages.asmx&quot;,
+&quot;webs.asmx&quot;
+
+#check to ensure the output location the user inputted was valid. If not the autocreate it.
+if ( $dirCheck = Test-Path $OutputLocation )
+{
+	#$existingFiles = Get-ChildItem *.* -Path $OutputLocation
+
+	#foreach ($existingFile in $existingFiles )
+	#{
+		#$existingFile
+#		$sourceFileWithPath = $OutputLocation + $existingFile
+#		Remove-Item $sourceFileWithPath
+	#}
+#	exit
+}
+else
+{
+	#Directory does not exists so auto create it for the user.
+	New-Item -ItemType Directory -Path $OutputLocation | Out-Null
+}
+
+function createAdminWrapperCSSourceFiles ([string]$SharePointServerName,[string]$SharePointAdminPort,[string]$OutputLocation,[array]$SharepointWebServiceList)
+{
+	#Traversing each web service listed in the array (defined above). For each web service
+	c#we are using the WSDL.exe file to generate the WSDL source files *.cs. Once create these will
+	#be used to create the dll library's to be used for accessing the sharepoint web services.
+	Write-Progress -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot;
+	$progressCount = 0
+	foreach ( $service in $SharepointWebServiceList)
+	{
+		#creating the parameter list to pass into the WSDL.exe.
+		#exampe of the full path would be
+		#
+wsdl.exe http://spdev/_vti_bin/webs.asmx?wsdl /out:c:johntestwebs.cs
+		$wsdlParam = &quot;http://&quot; + $SharePointServerName + &quot;:&quot; + $SharePointAdminPort + &quot;/_vti_bin/&quot; + $service + &quot;?wsdl /language:CS /out:&quot; + $OutputLocation + $service.Substring(0,$service.LastIndexOf(&quot;.&quot;)) + &quot;_admin.cs&quot;
+		#debug
+		#$wsdlParam
+		#Starting a new process for WSDL.exe and passing in the parameter. This will create the source files in the user specific directory.
+		$wsdlProcessStartInfoObject = New-Object System.Diagnostics.ProcessStartInfo
+		$wsdlProcessStartInfoObject.FileName = $WSDLLocation
+		$wsdlProcessStartInfoObject.Arguments = $wsdlParam
+		$wsdlProcessStartInfoObject.WindowStyle = &quot;Hidden&quot;
+		$wsdlProcessStartInfoObject.CreateNoWindow = $TRUE
+		$wsdlProcessStartInfoObject.UseShellExecute = $FALSE
+		$wsdlProcess = [System.Diagnostics.Process]::Start($wsdlProcessStartInfoObject)
+		$wsdlProcess.WaitForExit()
+		$percentComplete = ($progressCount / $SharepointWebServiceList.Count)*100
+		Write-Progress  -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot; -PercentComplete $percentComplete -CurrentOperation &quot;$percentComplete% complete&quot;
+		$progressCount += 1
+	}
+	Write-Progress -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Completed -Status &quot;Finished generating .NET wrapper source files.&quot;
+}
+
+function createAdminWrapperVBSourceFiles ([string]$SharePointServerName,[string]$SharePointAdminPort,[string]$OutputLocation,[array]$SharepointWebServiceList)
+{
+	#Traversing each web service listed in the array (defined above). For each web service
+	#we are using the WSDL.exe file to generate the WSDL source files *.cs. Once create these will
+	#be used to create the dll library's to be used for accessing the sharepoint web services.
+	Write-Progress -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot;
+	$progressCount = 0
+	foreach ( $service in $SharepointWebServiceList)
+	{
+		#creating the parameter list to pass into the WSDL.exe.
+		#exampe of the full path would be
+		#
+wsdl.exe http://spdev/_vti_bin/webs.asmx?wsdl /out:c:johntestwebs.cs
+		$wsdlParam = &quot;http://&quot; + $SharePointServerName + &quot;:&quot; + $SharePointAdminPort + &quot;/_vti_bin/&quot; + $service + &quot;?wsdl /language:CS /out:&quot; + $OutputLocation + $service.Substring(0,$service.LastIndexOf(&quot;.&quot;)) + &quot;_admin.cs&quot;
+		#debug
+		#$wsdlParam
+		#Starting a new process for WSDL.exe and passing in the parameter. This will create the source files in the user specific directory.
+		$wsdlProcessStartInfoObject = New-Object System.Diagnostics.ProcessStartInfo
+		$wsdlProcessStartInfoObject.FileName = $WSDLLocation
+		$wsdlProcessStartInfoObject.Arguments = $wsdlParam
+		$wsdlProcessStartInfoObject.WindowStyle = &quot;Hidden&quot;
+		$wsdlProcessStartInfoObject.CreateNoWindow = $TRUE
+		$wsdlProcessStartInfoObject.UseShellExecute = $FALSE
+		$wsdlProcess = [System.Diagnostics.Process]::Start($wsdlProcessStartInfoObject)
+		$wsdlProcess.WaitForExit()
+		$percentComplete = ($progressCount / $SharepointWebServiceList.Count)*100
+		Write-Progress  -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot; -PercentComplete $percentComplete -CurrentOperation &quot;$percentComplete% complete&quot;
+		$progressCount += 1
+	}
+	Write-Progress -Activity &quot;Creating admin site source files (CS) from WSDL...&quot; -Completed -Status &quot;Finished generating .NET wrapper source files.&quot;
+}
+
+function createGeneralWrapperCSSourceFiles ([string]$SharePointSite,[string]$OutputLocation,[array]$SharepointWebServiceList)
+{
+	#Traversing each web service listed in the array (defined above). For each web service
+	#we are using the WSDL.exe file to generate the WSDL source files *.cs. Once create these will
+	#be used to create the dll library's to be used for accessing the sharepoint web services.
+	Write-Progress -Activity &quot;Creating sharepoint site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot;
+	$progressCount = 0
+	foreach ( $service in $SharepointWebServiceList)
+	{
+		#creating the parameter list to pass into the WSDL.exe.
+		#exampe of the full path would be
+		#
+wsdl.exe http://spdev/_vti_bin/webs.asmx?wsdl /out:c:johntestwebs.cs
+		$wsdlParam = $SharePointSite + &quot;_vti_bin/&quot; + $service + &quot;?wsdl /language:CS /out:&quot; + $OutputLocation + $service.Substring(0,$service.LastIndexOf(&quot;.&quot;)) + &quot;.cs&quot;
+		#Starting a new process for WSDL.exe and passing in the parameter. This will create the source files in the user specific directory.
+		$wsdlProcessStartInfoObject = New-Object System.Diagnostics.ProcessStartInfo
+		$wsdlProcessStartInfoObject.FileName = $WSDLLocation
+		$wsdlProcessStartInfoObject.Arguments = $wsdlParam
+		$wsdlProcessStartInfoObject.WindowStyle = &quot;Hidden&quot;
+		$wsdlProcessStartInfoObject.CreateNoWindow = $TRUE
+
+		$wsdlProcess = [System.Diagnostics.Process]::Start($wsdlProcessStartInfoObject)
+		$wsdlProcess.WaitForExit()
+		$percentComplete = ($progressCount / $SharepointWebServiceList.Count)*100
+		Write-Progress  -Activity &quot;Creating sharepoint site source files (CS) from WSDL...&quot; -Status &quot;Please be patient&quot; -PercentComplete $percentComplete -CurrentOperation &quot;$percentComplete% complete&quot;
+		$progressCount += 1
+	}
+	Write-Progress -Activity &quot;Creating sharepoint site source files (CS) from WSDL...&quot; -Completed -Status &quot;Finished generating .NET wrapper source files.&quot;
+}
+
+function createGeneralWrapperVBSourceFiles ([string]$SharePointSite,[string]$OutputLocation,[array]$SharepointWebServiceList)
+{
+	#Traversing each web service listed in the array (defined above). For each web service
+	#we are using the WSDL.exe file to generate the WSDL source files *.cs. Once create these will
+	#be used to create the dll library's to be used for accessing the sharepoint web services.
+	Write-Progress -Activity &quot;Creating sharepoint site source files (VB) from WSDL...&quot; -Status &quot;Please be patient&quot;
+	$progressCount = 0
+	foreach ( $service in $SharepointWebServiceList)
+	{
+		#creating the parameter list to pass into the WSDL.exe.
+		#exampe of the full path would be
+		#
+wsdl.exe http://spdev/_vti_bin/webs.asmx?wsdl /out:c:johntestwebs.cs
+		$wsdlParam = &quot;http://&quot; + $SharePointServerName + &quot;/_vti_bin/&quot; + $service + &quot;?wsdl /language:VB /out:&quot; + $OutputLocation + $service.Substring(0,$service.LastIndexOf(&quot;.&quot;)) + &quot;_admin.cs&quot;
+		#debug
+		#$wsdlParam
+		#Starting a new process for WSDL.exe and passing in the parameter. This will create the source files in the user specific directory.
+		$wsdlProcessStartInfoObject = New-Object System.Diagnostics.ProcessStartInfo
+		$wsdlProcessStartInfoObject.FileName = $WSDLLocation
+		$wsdlProcessStartInfoObject.Arguments = $wsdlParam
+		$wsdlProcessStartInfoObject.WindowStyle = &quot;Hidden&quot;
+		$wsdlProcessStartInfoObject.CreateNoWindow = $TRUE
+
+		$wsdlProcess = [System.Diagnostics.Process]::Start($wsdlProcessStartInfoObject)
+		$wsdlProcess.WaitForExit()
+		$percentComplete = ($progressCount / $SharepointWebServiceList.Count)*100
+		Write-Progress  -Activity &quot;Creating sharepoint site source files (VB) from WSDL...&quot; -Status &quot;Please be patient&quot; -PercentComplete $percentComplete -CurrentOperation &quot;$percentComplete% complete&quot;
+		$progressCount += 1
+	}
+	Write-Progress -Activity &quot;Creating sharepoint site source files (VB) from WSDL...&quot; -Completed -Status &quot;Finished generating .NET wrapper source files.&quot;
+}
+
+function compileSourceFile ([string]$SourceFileType,[string]$OutputLocation)
+{
+	$fileSpec = &quot;*.&quot; + $SourceFileType
+	$gendFiles = Get-ChildItem $fileSpec -Path $OutputLocation
+
+	$progressCount = 0
+	$progressReport = &quot;Compiling (&quot; + $SourceFileType + &quot;) source files to DLL for use in powershell/Visual Studio...&quot;
+	Write-Progress -Activity $progressReport -Status &quot;Please be patient&quot;
+	foreach ($file in $gendFiles )
+	{
+		$fileWithPath = $OutputLocation + $file
+		$itemFile = Get-Item $fileWithPath
+
+		$CSCCompilerArgs = &quot;/target:library /out:&quot; + $itemFile.FullName.Substring(0,$itemFile.FullName.LastIndexOf(&quot;.&quot;)) + &quot;.dll &quot; + $itemFile.FullName
+		#run the compiler on each file to create the dll
+		$cscProcessStartInfoObject = New-Object System.Diagnostics.ProcessStartInfo
+		$cscProcessStartInfoObject.FileName = $CSCCompilerLocation
+		$cscProcessStartInfoObject.Arguments = $CSCCompilerArgs
+		$cscProcessStartInfoObject.WindowStyle = &quot;Hidden&quot;
+		$cscProcessStartInfoObject.CreateNoWindow = $TRUE
+
+		$cscProcess = [System.Diagnostics.Process]::Start($cscProcessStartInfoObject)
+		$cscProcess.WaitForExit()
+		#delete the source CS WSDL file.
+		Remove-Item $itemFile.FullName
+		$percentComplete = ($progressCount / $gendFiles.Count)*100
+		Write-Progress -Activity $progressReport -Status &quot;Please be patient&quot;  -PercentComplete $percentComplete -CurrentOperation &quot;$percentComplete% complete&quot;
+		$progressCount += 1
+	}
+	Write-Progress -Activity $progressReport -Completed -Status &quot;Finished compiling&quot;
+}
+
+switch ( $Language)
+{
+	&quot;CS&quot;
+	{
+		createAdminWrapperCSSourceFiles -SharePointServerName $SharePointServerName -SharePointAdminPort $SharePointAdminPort -OutputLocation $OutputLocation -SharepointWebServiceList $SharepointWebServiceList
+		if ( $SharePointSite -ne &quot;&quot; )
+		{
+			createGeneralWrapperCSSourceFiles -SharePointSite $SharePointSite -OutputLocation $OutputLocation -SharepointWebServiceList $SharepointWebServiceList
+		}
+		compileSourceFile -SourceFileType $Language -OutputLocation $OutputLocation
+	}
+	&quot;VB&quot;
+	{
+		createAdminWrapperVBSourceFiles -SharePointServerName $SharePointServerName -SharePointAdminPort $SharePointAdminPort -OutputLocation $OutputLocation -SharepointWebServiceList $SharepointWebServiceList
+		if ( $SharePointSite -ne &quot;&quot; )
+		{
+			createGeneralWrapperVBSourceFiles -SharePointSite $SharePointSite -OutputLocation $OutputLocation -SharepointWebServiceList $SharepointWebServiceList
+		}
+		compileSourceFile -SourceFileType $Language -OutputLocation $OutputLocation
+	}
+	default {}
+
+}
+
+Write-Host &quot;Succussfully created all web service wrapper dll's&quot;</pre>
+  </div>
+</div>
+
+<p>&#160;</p>
+
+<p>This post was about generating the DLL wrappers for use in other powershell postings so keep your eye for for more powershell scripts be posted here.</p>
+
+<p>NOTE: Since i have not signed this script, you will need to set the execution policy to unrestricted.
+  <br />For Example set-executionpolicy unrestricted</p>
+
+	  </div>
+
+		  
+
+		  
+
+		<hr>
+
+		<div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=To object model or to web service that is the question, SharePoint that is (In Windows PowerShell).&via=johnmcbride"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter fa-lg"></i>
+          Twitter
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="http://www.gravatar.com/avatar/" class="img-rounded author-image" />
+        <h4 class="section-title author-name">John McBride</h4>
+        <p class="author-bio">A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+		<ul class="pager">
+		  
+		  <li class="previous"><a href="/2008/06/09/08-48-27.html" title="SharePoint Visual Studio Extensions for WSS">&larr; Previous</a></li>
+		  
+		  
+		  <li class="next"><a href="/2008/06/11/10-55-14.html" title="Configuration steps for running SilverLight in Sharepoint 2007/WSS 3.0">Next &rarr;</a></li>
+		  
+		</ul>
+
+		<hr>
+	</div>
+	
+	<div class="col-sm-2 sidebar-2">
+	
+	</div>
+</article>
+<div class="clearfix"></div>
+
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'johnmcbride.me', 'auto');
+  ga('send', 'pageview');
+</script>
+

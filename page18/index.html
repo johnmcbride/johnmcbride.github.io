@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ramblings from a developer</title>
+	
+	<meta name="author" content="John McBride">
+
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/johnmcbride">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/johnmcbride">
+				<i class="fa fa-twitter"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				John McBride
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
+
+	<div class="col-sm-3 sidebar hidden-xs" style="">
+		<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!-- <img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" /> -->
+		<img src="/images/headers/blog_header.png" class="img-circle"/>
+	</a>
+	<h3 class="title">
+        <a href="/">John McBride</a>
+    </h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/johnmcbride">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/johnmcbride">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/jpmcbride">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+	 
+</div>
+<div>
+	<nav class="sidebar-nav">
+      <a class="page-nav-link" href="/">Home</a>
+      
+
+      
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/about.html">About Me</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/categories.html">Categories</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/contact.html">Contact</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/resume.html">My Work</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/tags.html">Tags</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+    </nav>
+</div>
+<!-- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>Ramblings from a developer </h1>
+</div>
+
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
+    4th,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/04/08-38-54.html">SharePoint Webcasts and Virtual Labs</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>Starting on June 3rd (yesterday) Microsoft is having SharePoint Webcasts every Tuesday and Wednesday. I just checked out the listing and they look pretty good, although any training is good right? :)&#160; Below is the list for the upcoming web cast (I went ahead an put some on demand Webcast for SharePoint below, remember training is good, me like a lot ;).</p>
+<p>&#160;</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378835&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Page Branding (Level 200)</a></b></p>
+<p><b>Tuesday, June 3, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378839&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Workflows (Level 200)</a></b></p>
+<p><b>Wednesday, June 4, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378841&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Web Services (Level 200)</a></b></p>
+<p><b>Tuesday, June 10, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378843&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Page Navigation (Level 200)</a></b></p>
+<p><b>Wednesday, June 11, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378845&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: User Management (Level 200)</a></b></p>
+<p><b>Tuesday, June 17, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378824&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Custom Content Types (Level 200)</a></b></p>
+<p><b>Wednesday, June 18, 2008</b></p>
+<p><i>9:00 A.M.–10:00 A.M. Pacific Time</i></p>
+<p>On-Demand Webcasts</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032374056&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">Momentum Webcast: Introduction to Templates in Windows SharePoint Services 3.0 and SharePoint Server (Level 100)</a></b></p>
+<p><b>Original Air Date: </b>April 23, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032343800&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">Momentum Webcast: Windows SharePoint Services 3.0 Application Templates (Level 100)</a></b></p>
+<p><b>Original Air Date: </b>July 16, 2007</p>
+<p><b>Customer Rating: </b></p>
+<p>New <b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378829&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Data Lists (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>May 21, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p>New <b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378832&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Silverlight and SharePoint Products and Technologies (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>May 27, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p>New <b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378834&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Using Event Handlers (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>May 28, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p>New <b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032378827&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: Introduction to SharePoint Products and Technologies for .NET Developers: Web Parts (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>May 20, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p><b><a href="http://go.microsoft.com/?linkid=6746937">MSDN Webcast: Microsoft ASP.NET AJAX 1.0 and SharePoint (Level 300)</a></b></p>
+<p><b>Original Air Date: </b>June 7, 2007</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032334733&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Products and Technologies for Developers (Part 1 of 4): SharePoint Server 2007 as a Development Platform (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>April 13, 2007</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032334735&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Products and Technologies for Developers (Part 2 of 4): Introduction to SharePoint Designer 2007 (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>April 16, 2007</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032340027&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Products and Technologies for Developers (Part 3 of 4): Site Conversion to Windows SharePoint Services (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>May 4, 2007</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032335141&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Products and Technologies for Developers (Part 4 of 4): Windows SharePoint Services and Access 2007 (Level 200)</a></b></p>
+<p><b>Original Air Date: </b>April 30, 2007</p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032370620&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Server 2007 and AJAX (Level 100)</a></b></p>
+<p><b>Original Air Date: </b>March 20, 2008</p>
+<p><b>Customer Rating: </b></p>
+<p><b><a href="http://msevents.microsoft.com/cui/WebCastEventDetails.aspx?EventID=1032370624&amp;EventCategory=4&amp;culture=en-US&amp;CountryCode=US">MSDN Webcast: SharePoint Server 2007 and Silverlight (Level 100)</a></b></p>
+<p><b>Original Air Date: </b>March 27, 2008</p>
+<p><b>Customer Rating: </b></p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
+    2nd,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/02/12-57-30.html">Do you want Silverlight in SharePoint?</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>If you do then you should check out this site. They have some really good video's (in addition to code) on how to integrate silverlight into SharePoint WebParts. </p>
+<p><a href="http://www.ssblueprints.net/sharepoint/">Silverlight Blueprint for SharePoint</a></p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
+    2nd,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/02/09-39-36.html">Where would a developer be without free stuff?</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>In writing some of my own software for both this blog and some commercial software I cant help but give credit to the many developers out there that produce free development tools and utilities. There are so many out there that we use I thought I would put together a list of a few that I use in my day to day work. By no means, is this a comprehensive list, its just some of the tools I use. Please provide comments if you wish to add additional tools. </p>
+<p>1. <a href="http://subversion.tigris.org/">Subversion</a> ( Excellent open source version system if you cant afford TFS)     <br />2. Toad&#160; SQL (This is a free SQL management studio for various flavors of SQL servers. At last count they were supporting MS SQ Server, MySQL, Oracle, DB2) Even though each of these are separate its a must have if you are doing database dev. <a href="http://www.toadsoft.com/">You can get the downloads here</a>     <br />3. <a href="http://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx">Microsoft Powershell</a>. This can be a very powerful utility if you use the SharePoint OM with it.     <br />4. <a href="http://www.powershellplus.com/">Powershell+.</a> This is an awesome powershell IDE with breakpoints, script completion and a ton of over feature. A must have if you are using powershell.     <br />5. <a href="http://sharpdevelop.net/OpenSource/SD/">#develop</a> (SharpDevelop). Excellent free IDE for writing .NET code and SharePoint web parts.     <br />6. <a href="http://www.codeplex.com/SPCamlViewer">CAML Viewer</a>. A must have for any SharePoint developer. This makes CAML generation a snap and it is always in my toolbox.     <br />7. <a href="http://www.codeplex.com/stsdev">STSDEV</a>. Another must have for any SharePoint developer     <br />8. <a href="http://winmerge.org/">WinMerge</a>. Good tool for merging and diff'ing files.     <br />9. <a href="https://addons.mozilla.org/en-US/firefox/addon/1843">FireBug</a> (Great for seeing what stylesheets on in use on a SP site, but also great for allowing you to make real-time changes and visualize the impact.) Granted this is only a firefox tools, but i believe that IE8 will have something very similar.     <br />10. <a href="http://www.codeplex.com/features">Sharepoint 2007 Features Project</a>. Some good developer tools that can be used in a dev rig. Items like logview, site actions menu that attaches to a debugger. There are some other items in this package so check it out.     <br />11. <a href="http://www.codeplex.com/wspbuilder">WSPBuilder</a>. Create project to help create WSP packages. Big improvement over how we used to have to create install packages.     <br />12. <a href="http://www.codeplex.com/spm">SharePoint Manager</a>. Excellent SharePoint object model explorer tool.     <br />13. <a href="http://www.microsoft.com/downloads/details.aspx?familyid=05E0DD12-8394-402B-8936-A07FE8AFAFFD&amp;displaylang=en">WSS 3.0 SDK</a>. If your doing any development on SharePoint , this is a great resource, the only resource for many of us from the SharePoint 2003 days.     <br />14. <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=6D94E307-67D9-41AC-B2D6-0074D6286FA9&amp;displaylang=en">Sharepoint Server 2007 SDK</a>. Another SDK resource.</p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
+    2nd,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/02/08-53-11.html">SharePoint Server 2007 Internal Buzz Kit</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>While I was surfing around the Micorosft download site for something else when I came across this download. A must have for any Sharepoint Architect or dev that is launching a new SharePoint site and wants a startup kit that contains videos, presentations etc. Based on the overview of the download site</p>
+<p>&quot;The SharePoint Server 2007 Internal Buzz Kit includes everything you need to run an internal communication campaign for your SharePoint Server 2007 launch. It includes a PowerPoint presentation, videos you can use in kiosks or embed in the presentation, training materials, posters, e-mail announcements, guidelines on building community, guidelines on how to use the buzz kit and more.&quot;</p>
+<p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=6231f77e-a8d5-43b2-a8d8-a9bb60304505&amp;displaylang=en">You can get it here</a></p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    May
+    28th,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/05/28/12-00-22.html">What employee's want!!!</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>This post is off topic in so much that it is not related to sharepoint but none the less, i believe it is pertinent to all of us that that have managers (or that manage people). I read an article last week that over half of US workers do not enjoy their job and would leave for less pay if they had a better place to go. I mean all we want as employee's is to be passionate about the work we do, get some atta boy's every once in a while so we know our contribution is valued and to enjoy going into work in the morning right?. I don't believe that is to much to ask of company's in today's technology driven market, do you?</p>
+<p>Here is an interesting ebook entitled <a href="http://www.davidzinger.com/wp-content/uploads/abcs-employee-engagement-keys.pdf">&quot;The keys of Employee Engagement&quot;</a> where each of the 12 authors lists out 26 keys for engaging with employee's. Basically, it is what we as employee's are looking for from the company's that we work for. There are a couple I like but check out the listing by Raven Young and Steve Roesler.</p>
+
+    
+    
+  </div>
+
+</article>
+
+<hr/>
+
+<ul class="pager"> 
+
+  
+  <li class="previous">
+    
+    <a href="/page17">&larr; Newer</a>
+    
+  </li>
+  
+  
+  <li>
+    <span class="page_number">Page: 18 of 19</span>
+  </li>
+
+  
+  <li class="next">
+    <a href="/page19">Older &rarr;</a>
+  </li>
+  
+
+</ul>
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'johnmcbride.me', 'auto');
+  ga('send', 'pageview');
+</script>
+

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Virtual Box 3 and Windows 7 (Making it work!)</title>
+	
+	<meta name="author" content="John McBride">
+
+	<!-- Enable responsive viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Le styles -->
+	<link href="/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
+
+	<!-- Le fav and touch icons -->
+	<!-- Update these with your own images
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	-->
+
+	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+</head>
+
+<body>
+	<nav class="navbar navbar-default visible-xs" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://github.com/johnmcbride">
+				<i class="fa fa-github"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="http://twitter.com/johnmcbride">
+				<i class="fa fa-twitter"></i>
+			</a>
+			
+			
+			<a type="button" class="navbar-toggle nav-link" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope"></i>
+			</a>
+			
+			<a class="navbar-brand" href="/">
+				<img src="http://www.gravatar.com/avatar/?s=35" class="img-circle" />
+				John McBride
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/categories.html">Categories</a></li>
+				<li><a href="/tags.html">Tags</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+	<!-- nav-menu-dropdown -->
+	<div class="btn-group hidden-xs" id="nav-menu">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bars"></i>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+			<li><a href="/categories.html"><i class="fa fa-folder"></i>Categories</a></li>
+			<li><a href="/tags.html"><i class="fa fa-tags"></i>Tags</a></li>
+			<li class="divider"></li>
+			<li><a href="#"><i class="fa fa-arrow-up"></i>Top of Page</a></li>
+		</ul>
+	</div>
+
+	<div class="col-sm-3 sidebar hidden-xs" style="">
+		<!-- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="/">
+		<!-- <img src="http://www.gravatar.com/avatar/?s=150" class="img-circle" /> -->
+		<img src="/images/headers/blog_header.png" class="img-circle"/>
+	</a>
+	<h3 class="title">
+        <a href="/">John McBride</a>
+    </h3>
+</header>
+
+
+<div id="bio" class="text-center">
+	A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+</div>
+
+
+<div id="contact-list" class="text-center">
+	<ul class="list-unstyled list-inline">
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://github.com/johnmcbride">
+				<i class="fa fa-github-alt fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/johnmcbride">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="mailto:comments@johnmcbride.me">
+				<i class="fa fa-envelope fa-lg"></i>
+			</a>
+		</li>
+		
+	</ul>
+	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="https://linkedin.com/in/jpmcbride">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+		
+		<li>
+			<a class="btn btn-default btn-sm" href="/feed.xml">
+				<i class="fa fa-rss fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+	 
+</div>
+<div>
+	<nav class="sidebar-nav">
+      <a class="page-nav-link" href="/">Home</a>
+      
+
+      
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/about.html">About Me</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/categories.html">Categories</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/contact.html">Contact</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/resume.html">My Work</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+          
+            <a class="page-nav-link" href="/tags.html">Tags</a>
+          
+        
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+				<!-- AAAA<br> -->
+				<!--Ramblings from a developer<Br> -->
+				
+				
+      
+    </nav>
+</div>
+<!-- sidebar.html end -->
+
+	</div>
+
+	<div class="col-sm-9 col-sm-offset-3">
+		<div class="page-header">
+  <h1>Virtual Box 3 and Windows 7 (Making it work!) </h1>
+</div>
+<article>
+	
+</ul>
+	<div class="col-sm-10">
+		<ul class="tags">
+  
+</ul>
+	 <span class="post-date">
+	   
+	   July 
+	   28th,
+	   
+	   2009
+		 
+	 </span>
+	 
+	  <div class="article_body">
+	  <p><font size="3" face="Tahoma">On and off for the last few weeks I have been trying to get VirtualBox 3.0.2 installed on my Windows 7 RC device with no real success :(. During every install I ended up getting the dreaded “Setup wizard end prematurely” and subsequently VirtualBox wouldn't get installed and it would be back to the drawing board.</font></p>
+<p><font size="3" face="Tahoma">Well, after some troubleshooting and some customizing of the MSI file I have finally got VirtualBox installed and running :) but wanted to put this post together for those that are running into the same issue.</font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma">So, let’s get to it :)</font></p>
+<p><font size="3" face="Tahoma">First, let me define what my system is     <br />1) Windows 7 Ultimate RC 64bit.      <br />2) No previous version of Virtual Box installed on this device.</font></p>
+<p><font size="3" face="Tahoma">What your going to need:     <br />1) Orca MSI Editor      <br />2) Windows Driver Kit (MSDN Downloads)</font></p>
+<p><font size="3" face="Tahoma">Running the downloaded install of VirtualBox you will get the following installation error. The dreaded “Setup wizard ended prematurely”! That’s never good!</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image.png"><font size="3" face="Tahoma"><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image1.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb.png" width="514" height="403" /></a></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3"><font face="Tahoma">After looking at the log file, you will notice a curious error       <br /><strong><font color="#800040">”DIFXAPP: ERROR - The operating system you are running on is not supported. Only Windows 2000, Windows XP, Windows Server 2003 and Windows “</font></strong></font></font></p>
+<p><font color="#000000" size="3" face="Tahoma">After, looking at the above message it appears that DIFXAPP is having a problem some where, my first theory is that the VirtualBox installer is using an older version of the DIFXAPP dll.      <br />So, armed with the above theory, lets update the MSI installer with the updated versions of DIFXAPP dlls.</font></p>
+<p><font color="#000000"><font size="3" face="Tahoma">The first thing we need to do, is to download the Windows Driver Kit (Specifically I downloaded the driver kit for Windows 7). This download contains the updated DIFXAPP file that we are going to need to replace the ones in the MSI. Right now it looks like this download is on the MSDN Subscribers site so you will probably need a MSDN Subscription in order to download it. You can access the site </font><a href="http://msdn.microoft.com/subscriptions" target="_blank"><font size="3" face="Tahoma">here</font></a><font size="3" face="Tahoma">.</font></font></p>
+<p><font size="3" face="Tahoma">After you have downloaded and installed the Windows Driver Kit we are going to need to update the MSI with these new updated files. I know what your thinking, We didn't get an MSI when we downloaded, we got an EXE. No problem, let me explain. When we run the virtualbox insaller, the EXE extracts and MSI called VirtualBox-3.0.2-r49928-MultiArch_amd64.msi, as see in the following image. </font></p>
+<p><font size="3" face="Tahoma">Now, where exactly is this file? The MSI file will get extracted to the users temp appdata folder. On Windows 7 it will be located in the following location      <br />C:Users[YourUsername]AppDataLocalTempVirtualBox</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image2.png"><font size="3" face="Tahoma"><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image3.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb1.png" width="683" height="40" /></a></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma">So, now that we have all the necessary files, we need to put it all together and update the MSI file with the updated DIFXAPP dlls. The first thing we are going to want to do is to open up the above MSI file in the Microsoft ORCA MSI Editor. Once you do you will see the following. Note the Binary item in the left pane in selected and in the right pane you can see the DIFX*.dll files that we are going to need to replace.</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image4.png"><font size="3" face="Tahoma"><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image5.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb2.png" width="596" height="520" /></a></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3" face="Tahoma">The next thing we need to do is to delete the DIFX*.dll items from the MSI. You can do this by right clicking on the DIFxApp.dll and selecting “Drop Row” from the menu that pops up. You will need to do this for the DIFxAppA.dll as well. Like the following</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image6.png"><font size="3" face="Tahoma"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb3.png" width="603" height="621" /></font></a><font size="3" face="Tahoma"> </font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image7.png"><font size="3" face="Tahoma"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb4.png" width="549" height="525" /></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma">The next thing is is to re-add the updated DIFX files we got from the updated Windows Driver Kit to the MSI file. We can do this by right clicking and selecting “Add Row”</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image8.png"><font size="3" face="Tahoma"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb5.png" width="512" height="656" /></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma">Now we need to select the updated DIFxApp.dll we extracted from the Windows Driver Kit we downloaded earlier. In my installation it is located here     <br />C:WinDDK7100.0.0redistDIFxDIFxAppWixLibamd64 </font></p>
+<p><font size="3" face="Tahoma">Make sure the Name Attribute is the exact name as the DLL name. For example, the name for the DIFxApp.dll you be DIFxApp.dll</font></p>
+<p><font size="3" face="Tahoma">You will need to do this once for the DIFxApp.dll and once for the DIFxAppA.dll files. Like the following screen shots.</font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image9.png"><font size="3" face="Tahoma"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb6.png" width="654" height="578" /></font></a><font size="3" face="Tahoma"> </font></p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image10.png"><font size="3" face="Tahoma"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/07/image-thumb7.png" width="734" height="612" /></font></a><font size="3" face="Tahoma"> </font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma">Once that is complete, you will need to save the MSI file from ORCA. Make sure you just do a File-&gt;Save. If you do a SaveAs the MSI will lose information and it will not work.</font></p>
+<p><font size="3" face="Tahoma">Once you complete the save you will now be able to run the MSI and get VirtualBox installed.</font></p>
+<p><font size="3" face="Tahoma">I am working on a quick video to show the results and should have it up soon. If you have any questions/comments feel free to comment and ping my on twitter twitter.com/johnmcbride</font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma"></font></p>
+<p><font size="3" face="Tahoma"></font></p>
+
+	  </div>
+
+		  
+
+		  
+
+		<hr>
+
+		<div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Virtual Box 3 and Windows 7 (Making it work!)&via=johnmcbride"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter fa-lg"></i>
+          Twitter
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="http://www.gravatar.com/avatar/" class="img-rounded author-image" />
+        <h4 class="section-title author-name">John McBride</h4>
+        <p class="author-bio">A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!</p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+		<ul class="pager">
+		  
+		  <li class="previous"><a href="/2009/06/24/23-16-24.html" title="XenServer SDK, Using JQuery,WCF and SharePoint to provide a simple UI to admins/users.">&larr; Previous</a></li>
+		  
+		  
+		  <li class="next"><a href="/2009/08/18/11-08-56.html" title="iPhone and XenServer Managment, There is an app for THAT!, and it’s called Xeni">Next &rarr;</a></li>
+		  
+		</ul>
+
+		<hr>
+	</div>
+	
+	<div class="col-sm-2 sidebar-2">
+	
+	</div>
+</article>
+<div class="clearfix"></div>
+
+
+
+
+
+		<footer>
+			<hr/>
+			<p>
+				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'johnmcbride.me', 'auto');
+  ga('send', 'pageview');
+</script>
+
