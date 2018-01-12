@@ -1,0 +1,42 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 5 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+disqus: johnmcbride.me
+youtube: johnmcbride
+google_analytics: johnmcbride.me
+title: John McBride
+tagline: Ramblings from a developer
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Ramblings from a developer
+
+description: Ramblings from a Technology Evangelist/Developer Advocate with a focus on development
+author:
+  name: John McBride
+  email: comments@johnmcbride.me
+  github: johnmcbride
+  twitter: johnmcbride
+  pinterest: 
+  linkedin: jpmcbride
+  bio: A Technology Evangelist/Developer Advocate by day, dad, husband and developer, always trying to make sense of this crazy stuff!
+  email_md5: 
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+#sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
