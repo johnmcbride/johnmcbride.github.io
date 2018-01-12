@@ -316,6 +316,67 @@
 </ul>
   <span class="post-date">
     
+    November
+    4th,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/11/04/17-51-12.html">Two LINQ tools your toolbox (Free ones)</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>I have been twiddling around with LINQ these past few days and cam across two tools that I really like and pretty much use them for all my LINQ query construction.</p>
+<p>The first tool is a visual studio 2008 add-in called Visual LINQ Query Builder.    <br />There is a good blog from the guy that helped write here <a title="http://blogs.msdn.com/mitsu/archive/2008/04/02/visual-linq-query-builder-for-linq-to-sql-vlinq.aspx" href="http://blogs.msdn.com/mitsu/archive/2008/04/02/visual-linq-query-builder-for-linq-to-sql-vlinq.aspx">http://blogs.msdn.com/mitsu/archive/2008/04/02/visual-linq-query-builder-for-linq-to-sql-vlinq.aspx</a>    <br />and you can download the setup file from the following location.    <br /><a title="http://code.msdn.microsoft.com/vlinq" href="http://code.msdn.microsoft.com/vlinq">http://code.msdn.microsoft.com/vlinq</a>    <br />This only runs in the full blown VS tools so if your running the express editions you should probably try the next one I am going to list.</p>
+<p>The next one is called LINQPad. This is another good tool but without the VS integration. You can download it from <a title="http://www.linqpad.net/" href="http://www.linqpad.net/">http://www.linqpad.net/</a> and its pretty speedy and the download is only about 2mb.</p>
+<p>These tools have help me out quiet a bit here recently so I thought I should give them some props :)</p>
+<p>I’m out… By the way… Did you vote today?</p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    October
+    31st,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/10/31/14-50-15.html">Execute Timers Job From STSADM.EXE</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>Here is a STSADM command hat will force all pending timer jobs within sharepoint.</p>
+<p>STSADM –o execadmsvcjobs</p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
     October
     30th,
     
@@ -412,88 +473,6 @@
 
 </article>
 
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    October
-    8th,
-    
-    2008
-  </span>
-
-  <h2>
-    <a href="/2008/10/08/16-27-39.html">SharePoint Migration Tool (Plugin enabled)</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>Recently I have been in the process of performing a migration of a SharePoint internal site over to a new infrastructure. As most of use, during this process, I used many tools to complete the process, but the one thing I noticed is that there were all these migration utilities out there, each doing a pretty specific task, so every time we would migrated we would have to get the tools installed, etc.</p>
-<p>This sounded like a great opportunity to start playing around with creating a pluggable type application that could host multiple migration plugins, hopefully written by other sharepoint devs. My purpose here was really to create a host app that others could use to display their pluggable UI’s in and basically have a single UI for a sharepoint migration/upgrade/anything else :). I also wanted to keep the interface definitions really simple so that it could be easy to take existing code, wrap in up using the interfaces and plug it into the app. (Remember this is just beat).</p>
-<p>So with that being said, lets dive into the app and talk about how to create the plugins.</p>
-<p>First lets take a look at the application. Below is an image of the UI. the host app is divided into two halfs, the top for the plugins and the bottom for the logging. Each plugin that the app finds has it own tab in the upper portion of the application, and a &quot;Loggin” tab in the lower portion of the app. This allows for plugin devs to customize their own logging UI in case they would like to show log information in a different way.</p>
-<p>So the next would be to write a plugin for the application. The application includes a shared library called SharePointStuffPluginProvider.dll. this file contains the interface definitions that need to be implemented for each plugin. Before we get into actually writing the plugin code lets talk about the interface definitions first. There are two that need to be implemented for each plugin.</p>
-<pre lang="csharp">public interface IPlugIn
-{
-	System.Windows.Forms.UserControl Show();
-	string Name { get; }
-	string Description { get; }
-	System.Net.ICrendentials AuthenticationCredential { get; set; }
-	List<ilogitem> LogItems();
-}&lt;/pre&gt;
-
-</ilogitem></pre>
-
-    
-    
-  </div>
-
-</article>
-
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    September
-    18th,
-    
-    2008
-  </span>
-
-  <h2>
-    <a href="/2008/09/18/16-59-45.html">Intellisense for feature.xml and elements.xml</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>After doing a lot of custom SharePoint 2007 development since MOSS was released I believe that any custom code should be written as a feature. This make for deployment/activation/deactivation from the SharePoint administrator standpoint a no brainer.</p>
-<p>So with everything developed as a feature we are going to get a excellent understanding of the feature.xml and element.xml. Now there is some great documentation on the MSDN site located here but I develop my feature.xml and elements.xml file in Visual Studio 2008 (Actually I use WSPBuilder found here, but it’s all the same) so want to use the built in intellisense. I mean that is a feature that we cant live without anymore right?</p>
-<p>Well, below I have outlined how we can get intellisense to work when working with the feature.xml and elements.xml files. All it requires is to at and XSD schema file to each on the xml files.</p>
-<p>1) Open up your feature.xml file in Visual Studio and in the properties of the feature.xml file you will need to click the ellipse button next to the Schemas property.</p>
-<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image-thumb.png" width="550" height="480" /></a></p>
-<p>2) Once the Schema window opens you will want to click the “Add” button.</p>
-<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image1.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image-thumb1.png" width="640" height="426" /></a></p>
-<p>3) The next step here is to navigate to the directory where wss.xsd file is located. This file is located in the “C:Program FilesCommon FilesMicrosoft SharedWeb Server Extensions12TEMPLATEXML” location on the sharepoint server. If you do not have a local installation of sharepoint you can copy the wss.xsd to your development machine and reference that file in the schema dialog box.</p>
-<p>Once you have done this you will have intellisense for the feature and element xm based files, which will make developing the feature and elements xml files much easier. As you can see in the following screenshot intellisense is working based on the XSD.</p>
-<p>Feature.xml<a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image2.png"><img style="border-bottom: 0px; border-left: 0px; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image-thumb2.png" width="581" height="480" /></a></p>
-<p>Elements.xml<a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image3.png"><img style="border-bottom: 0px; border-left: 0px; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/09/image-thumb3.png" width="640" height="428" /></a>&#160; </p>
-<p></p>
-<p>Hope this helps speeding up your XML development for create features with Visual Studio.</p>
-
-    
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -524,7 +503,7 @@
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

@@ -316,6 +316,79 @@
 </ul>
   <span class="post-date">
     
+    December
+    17th,
+    
+    2009
+  </span>
+
+  <h2>
+    <a href="/2009/12/17/15-43-33.html">WorkFlow Studio 2.0 Development and Cached Activities (A Utility to clear them up)</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>Recently I was playing around with Citrix WorkFlow Studio 2.0. Specifically I was writing some custom activities to help with data connections, etc. Before I get into the tech contents, lets provide a little background on WorkFlow studio and how we can extend it with our own code. If you want to see an brief unabridged of WorkFlow studio click the link below. You can also check out the <a href="http://community.citrix.com/cdn/wf" target="_blank">Citrix site here</a>
+<br />
+<a href="/downloads/CitrixWfStudioActivityCacheInstall.zip">Click here to download the Workflow Cache Cleanup Utility</a></p>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    12th,
+    
+    2009
+  </span>
+
+  <h2>
+    <a href="/2009/11/12/10-44-25.html">AJAX Minifier and a tool to view the output</a>
+  </h2>
+
+  <div>
+    
+    
+    <div style="padding-bottom: 0px; padding-left: 0px; width: 181px; padding-right: 0px; display: block; float: none; margin-left: auto; margin-right: auto; padding-top: 0px" id="scid:8747F07C-CDE8-481f-B0DF-C6CFD074BF67:fcf195c6-1908-48ef-beaf-11f6ce7e20f0" class="wlWriterEditableSmartContent"><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/MinViewer8x6.png" title="Ajax Minifier Viewer" rel="thumbnail"><img border="0" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/MinViewer.png" width="171" height="158" /></a></div>
+<p><a href="http://www.sharepoint-stuff.com/downloads/AjaxMinifierViewer.zip" target="_blank">Download the application here</a></p>
+<p>Recently the the Microsoft AJAX team released Ajax Preview 6 up on codeplex (<a href="http://aspnet.codeplex.com/wikipage?title=AJAX&amp;referringTitle=Home" target="_blank">Check it out here</a>). With this release they also released an Ajax Minifier tool that will allow you to crunch or minify JS files. There are several ways to use the minifier tool, you can incorporate in into your build process using msbuild, you could run command line tool manually and create an output file, or you can use the minifier dll that gets distributed with the tool in your own applications. It is this third option that sparked my interest so I thought I would whip an application that allows you to load Javascript into an editor and then “crunch” it with the Ajax minifier object and visually see the output. Below is a screen shot of the final output. (I am adding a settings option so you can control how the minifier works)</p>
+<p>&#160;</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image_thumb.png" width="867" height="686" /></a> </p>
+<p>If you just want to grab the zip fie that has the exe in it to run, <a href="http://www.sharepoint-stuff.com/downloads/AjaxMinifierViewer.zip" target="_blank">you can grab it from here</a>. </p>
+<p>The first thing we will need to do is grab and install the Ajax Minifier <a href="http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=34488" target="_blank">from here</a>. Once installed you will find the ajaxmin.dll file in the install location, like the following. It is that file that contains all the “crunching” code and the file you will need to reference in your project.</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image1.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/11/image_thumb1.png" width="392" height="243" /></a> </p>
+<p>Once you have referenced the ajaxmin.dll file in your solution you will be able to “crunch” some javascript. In order to “crunch” the javascript you will need to make a call like the following.</p>
+<div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:0bf8de87-2099-4f07-9ad8-1c851a64b3c7" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px">Code Snippet</div> <div style="background: #ddd; max-height: 300px; overflow: auto"> <ol style="background: #ffffff; margin: 0 0 0 2em; padding: 0 0 0 5px;"> <li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#0000ff">string</span> Js = <span style="color:#a31515">@&quot;function ()</span></li> <li style="background: #f3f3f3">{</li> <li>&#160;&#160;&#160;&#160;<span style="color:#a31515">//these are some javascript comments</span></li> <li style="background: #f3f3f3">&#160;&#160;&#160;&#160;<span style="color:#a31515">var testVar = &#39;this is some alert text&#39;;</span></li> <li>&#160;&#160;&#160;&#160;<span style="color:#a31515">alert(&#39;Hey What are you doing!!!!, Crunch this stuff.....&#39;);</span></li> <li style="background: #f3f3f3">}<span style="color:#a31515">&quot;</span>;</li> <li>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Microsoft.Ajax.Utilities.<span style="color:#2b91af">ScriptCruncher</span> sc = <span style="color:#0000ff">new</span> Microsoft.Ajax.Utilities.<span style="color:#2b91af">ScriptCruncher</span>();</li> <li style="background: #f3f3f3">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#0000ff">string</span> CrunchedJS = sc.Crunch(Js);</li> </ol> </div> </div> </div>
+<p>&#160;</p>
+<p>I also want to give credit to the #develop guys over at ic#code for putting out a excellent open source IDE for .NET development. I am using the #develop’s&#160; code editor control in this project to obtain the syntax highlighting, etc. Great work guys!! </p>
+<p>you can check them out over at <a href="http://www.icsharpcode.net/OpenSource/SD/">http://www.icsharpcode.net/OpenSource/SD/</a></p>
+<p>&#160;</p>
+<p>That’s it for now and as always if you have any comments or questions you can comment here at the blog or catch me on twitter at <a href="http://twitter.com/johnmcbride">http://twitter.com/johnmcbride</a></p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
     August
     18th,
     
@@ -432,81 +505,6 @@
 
 </article>
 
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    June
-    15th,
-    
-    2009
-  </span>
-
-  <h2>
-    <a href="/2009/06/15/23-18-03.html">ASP.NET MVC problem with Visual Studio 2010 Beta 1</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>Before we get into this post, I first want to state I fully understand that both Visual Studio 2010 and the ASP.NET MVC out of band installer are beta products, so this issue may be fixed, but i wanted to put it out there to see if anyone else has encountered a similar problem. This is an open ended post as I am searching for answers on this issue, but will continue to research this as I have time. If you have any suggestions or a fix drop me a line and we can chat.</p>
-<p><font color="#ff0000">The Problem: When creating a out of the box MVC application and adding a custom class to the model folder, trying to reference that data class within a view causes Visual Studio 2010 and the VisualStudio Web Server to crash. The same application works fine with Visual Studio 2008.</font></p>
-<p>Lets show an example.</p>
-<p><strong><font size="5">Visual Studio 2008</font></strong></p>
-<p>In Visual Studio 2008 let create a new MVC application. Create or dont create the test cases, it doesnt really matter.    <br /><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2009/06/image.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2009/06/image-thumb.png" width="244" height="164" /></a> </p>
-<p>Once the application is created, Lets add a class to our model folder, with the following definition.    <br /></p>
-<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 20px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper">   <div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">     <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060" id="lnum1">   1:</span> <span style="color: #0000ff">public</span> <span style="color: #0000ff">class</span> TestFolder</pre>
-<!--CRLF-->
-
-</div></div>
-
-    
-    
-  </div>
-
-</article>
-
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    June
-    4th,
-    
-    2009
-  </span>
-
-  <h2>
-    <a href="/2009/06/04/11-57-58.html">Citrix, The Developer Platform</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>As developers, we are always looking for platforms to build upon right? Did you know that Citrix can be viewed as a developer platform? I think many enterprises still view Citrix as the infrastructure company (Although, that view has been gradually changing over the last few years) that they have come to love. I believe those enterprise and the enterprise developers in them need to start looking at Citrix as a developer platform and realize that they can start building better experiences for the end users, weather it be IT Admins or the traditional end users. Citrix can be viewed as and *is* a developer platform, specifically one that needs to start being built upon.</p>
-<p>If we think of Microsoft, we think traditionally of a system where a developer can pretty much tap into as much stuff as he wants (in addition to the Steve Ballmer Developers Developers Developers speech! :)). They have an enormous API set for windows itself, and for the most part, every product they produce has a “Developer Story”. Some examples of this are Office has the VSTO model, Want to host Windows Workflow Designer in your custom app, no problem, Need to talk to SharePoint, use the Web Services.&#160; This developer focus is what enables so many people to write for the windows platform.</p>
-<p>Now, if we look at Citrix, they have a similar story, although its not promoted as much as the Microsoft Developer focus. One that I feel needs to be promoted more, and hence this article :). For example, did you know that Citrix has a total of 34 SDK’s that are available to developers? Everything from XenApp to Password Manager to NetScaler. I have tried to break them out below. To download them, you can go to the community site over <a href="http://community.citrix.com">here</a> </p>
-<table border="0" cellspacing="0" cellpadding="2" width="611"><tbody>     <tr>       <td valign="top" width="133">Category</td>        <td valign="top" width="133">Related # of SDK’s</td>        <td valign="top" width="343">Notes</td>     </tr>      <tr>       <td valign="top" width="133">XenApp</td>        <td valign="top" width="133">13</td>        <td valign="top" width="343">This covers things like MFCOM,Password manager, WI, Virtual Channel SDK, etc</td>     </tr>      <tr>       <td valign="top" width="133">XenServer</td>        <td valign="top" width="133">5</td>        <td valign="top" width="343">XenServer Related SDK’s</td>     </tr>      <tr>       <td valign="top" width="133">XenDesktop</td>        <td valign="top" width="133">1</td>        <td valign="top" width="343">XenDesktop Related SDK’s</td>     </tr>      <tr>       <td valign="top" width="133">NetScaler</td>        <td valign="top" width="133">12</td>        <td valign="top" width="343">NetScaler Related SDK’s</td>     </tr>      <tr>       <td valign="top" width="133">Workflow Studio</td>        <td valign="top" width="133">1</td>        <td valign="top" width="343">Workflow Studio SDK’s</td>     </tr>      <tr>       <td valign="top" width="133">Citrix Online</td>        <td valign="top" width="133">2</td>        <td valign="top" width="343">These are the GotoMeeting and GotoAssist SDK’s. Now even though you have to have a GTM or GTA account to get and use these, the point is they are still there. </td>     </tr>   </tbody></table>
-<p>&#160;</p>
-<p>So your saying, great! I’m buying into this and now i want to start using these SDK’s to build the next great app for my enterprise, but I don't have a datacenter or server farm running this stuff and I cant afford to purchase licenses. Well, don't fret. If you want to start developing for XenApp (Presentation Server), then Citrix offers a developer’s version of XenApp as well as the Dev license (1 year in length). This will get you up and running for XenApp/Wi/Powershell/Access Console/etc development. No cost, no hassle (There is not one yet for the XenApp 5.0 on Windows 2008 though). </p>
-<p>Now, for the other products like NetScaler, Password Provisioning,etc, I’m not aware of Developer versions of these, although I believe that there should be some type of scaled back, one user (maybe two), type of offering to allow more developers to code up those one of a kind applications that are just sitting there waiting to be written :). I mean Citrix is a Developer Platform so lets start to utilize all of the platform to build those apps. :)</p>
-<p>You can download the Developer Edition of XenApp at the <a href="https://www.citrix.com/English/ss/downloads/results.asp?productID=186">following location</a>. Remember, you will need a <a href="http://www.mycitrix.com">MyCitrix</a> Account in order to download.</p>
-<p>Now, my point here is not to compare Citrix to Microsoft but simply to provide a reference point and to inform developers that Citrix is a platform that we can build on. There are enough&#160; SDK’s available that we should start using them to build up some interesting experiences. </p>
-<p>You may be saying, well how much stuff can we do, automate publishing an application? Well, what could be some interesting user experiences we could think of where the SDK’s could help. How about&#160; a single interface for all of your apps no matter what kind they are (See my previous post here), Maybe a silverlight alternative to Web Interface (I think there is one like this already, at least there was long time ago), Maybe integrate Web Interface into you windows app (or a subset of it to facilitate some launching mechanism)? Maybe integrate MFCOM into your custom provision system to add users to an application when they get access to it or write some Workflow Activities and make them available to the community? All of these things are possible with the use of the SDK’s provided by Citrix and its time that we as developers start viewing Citrix as a Developer Platform, at least in my humble opinion :). These tools are not just for admin functions anymore, lets start to push the envelope!</p>
-<p>Thats my .02, Tell me what you think? do you have any cool XenApp code that could benefit the community, head on over to the <a href="http://community.citrix.com">Citrix Community Site</a> and participate.</p>
-
-    
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -537,7 +535,7 @@
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

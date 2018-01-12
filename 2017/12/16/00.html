@@ -333,10 +333,10 @@
 	  <p>I have recently been working on building some tools using the kubernetes API. To enable this develoment locally I am running kubernetes using <a href="https://github.com/kubernetes/minikube">minikube</a>. If you haven’t check this out yet and want to learn kubernetes, this is an awesome local environment to get started with.</p>
 
 <p>The issue is, when running minikube, how do you access the kubernetes API since the API server is not accessible to any environment outside the kubernetes cluster? For Example, if the k8s api server IP address is 10.96.0.1 and you would like to access the swagger endpoint. You would try http(s)://10.96.0.1/swaggerapi but you come across this…
-<img src="/images/2017-12-16-00/kube-api-error.png" alt="endpoint error" /></p>
+<a href="../images/2017-12-16-00/kube-api-error.png">endpoint error</a></p>
 
 <p>Maybe it’s the minikube host IP that we should access. Assuming our host IP address is 192.168.64.8, let’s try to access the swagger api endpoint using the host IP.
-<img src="/images/2017-12-16-00/kubeapi-unavailable.png" alt="host error" /></p>
+<a href="../images/2017-12-16-00/kubeapi-unavailable.png">host error</a></p>
 
 <p>Ok, both methods we have tried are unsucessful, so what’s next? It turns out that kubernetes has a proxy option on the kubectl CLI (command line interface) that will help you expost the API endpoint to the local host. If you execute the proxy command you will create a proxy for the kubernetes services that you will be able to access from your localhost.</p>
 
@@ -345,12 +345,12 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>kubectl proxy</code></pre></figure>
 
 <p>and you should see
-<img src="/images/2017-12-16-00/proxy-starting.png" alt="proxy starting..." /></p>
+<a href="../images/2017-12-16-00/proxy-starting.png">proxy starting…</a></p>
 
 <p>Now that we have the proxy started (note that it is listening on port 8001) we should be able to access the api endpoints from our localhost. For example, if our localhost IP address is 192.168.64.8 and the proxy server is running, you should be able to access the swagger api endpoint like this, http(s)://192.168.64.8:8001/swaggerapi</p>
 
 <p>and indeed we can!
-<img src="/images/2017-12-16-00/kubeapi-swagger.png" alt="swagger success" /></p>
+<a href="../images/2017-12-16-00/kubeapi-swagger.png">swagger success</a></p>
 
 <p>Now that we can access the kubernetes API server from localhost, we can start developing with the API without having to spin up a shiney new linux environment. ;)</p>
 
@@ -428,7 +428,7 @@
 		  <li class="previous"><a href="/2016/02/06/03-31-09.html" title="Introduction to the Citrix Developer extension for Visual Studio">&larr; Previous</a></li>
 		  
 		  
-			<li class="next disabled"><a>Next &rarr;</a>
+		  <li class="next"><a href="/2018/01/11/11-01-28.html" title="Vue.JS Quickstart (With no build tools)">Next &rarr;</a></li>
 		  
 		</ul>
 
@@ -448,7 +448,7 @@
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2017 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

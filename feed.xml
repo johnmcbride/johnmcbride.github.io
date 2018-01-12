@@ -7,6 +7,126 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Vue.JS Quickstart (With no build tools)</title>
+				<description>&lt;p&gt;Recently I have been building a cross platform application based on the &lt;a href=&quot;http://electron.atom.io&quot;&gt;electron
+shell&lt;/a&gt;. Part of this process has been my effort to learn
+some front-end frameworks like &lt;a href=&quot;https://vuejs.org/&quot;&gt;VueJs&lt;/a&gt;, &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; and &lt;a href=&quot;https://angular.io/&quot;&gt;Angular&lt;/a&gt; to build out the UI for the electron application. For this particular application, I have decided to focus
+on learning the VueJs framework.&lt;/p&gt;
+
+&lt;p&gt;The one thing that each of these frameworks have in common is the use of build tools to merge, transpile and package a site into a working/debuggable artifcat. Because of these build tools it sometimes takes away from learning the actual framework at the basic level, but instead, spend time learning the build system just to make it work.&lt;/p&gt;
+
+&lt;p&gt;There are a ton of great examples out there but generally they all use some build tools to get the sample up and running, I would like to distill a quick start down to the simplest version and try not to use any build tools to get it working.&lt;/p&gt;
+
+&lt;p&gt;Let’s get started.&lt;/p&gt;
+
+&lt;p&gt;In a blank directory create a file called index.html and paste the following html into the page. This is basic html page, nothing else.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;VueJs Manual&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+   
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that we have our base HTML page, let add VueJs to the page. The easiest way to do this is to pull the VueJs script from a CDN (content delivery network), and we can do that but simeply adding a script tag to the &amp;lt;head&amp;gt; section of our index.html page. (I’ve added the whole HTML markup here, but you can just add the script tag.)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;VueJs Manual&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://unpkg.com/vue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+   
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that we have VueJs loaded, let’s doing something with it.&lt;/p&gt;
+
+&lt;p&gt;First, we should add a HTML heading element to the body section and name it “my heading”.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;myheading&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The next item we need to figure out how to insert text into this heading element. Well VueJs has a template that we can use that is defined with curley braces. For example “”. These are typically know as mustaches.
+When we add that our element now looks like this.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;myheading&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This says that VueJs will set a variable called message on it’s data object and then replace the “” template with that variables value.&lt;/p&gt;
+
+&lt;p&gt;Now that we have that, we need to create the VueJs instance and data object. In order to do that, we need to add an additional &lt;script&gt;&lt;/script&gt; to the end of the body element in our HTML page. Below is the full page that has the h2 heading and the VueJs script. Let’s break it down tp understand what is going on.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;script&gt;&lt;/script&gt; tag we are declaring a “mainVue” variable and creating a new Vue instance. In the Vue constructure there is a “el” prop. This is css selector for the “element” that should be selected and assigned the data object. Remember, if there are multiple elements this data will be propagated to all of them.&lt;/p&gt;
+
+&lt;p&gt;Now there also the  data object, here is where we can define what our data looks like. In this example, the data object contains a property called “message”. As you can see this will be mapped to the  template defined on the H2 tag. This will populate the  with “this is my test” value. Awesome!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;VueJs Manual&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://unpkg.com/vue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;myheading&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mainVue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#myheading&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+               &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;this is my test&amp;quot;&lt;/span&gt;
+           &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are alot of examples out there that use build tools to get alot of this working, but this example is purley meant to create the smalles and succinct understanding of how to get started with VueJs (without build tools). This was one of my stumbling blocks when trying to learn this and it helped me in breaking down this into just the required pieces. There is alot more that you can do will build tools and alot of samples out there can help with that.&lt;/p&gt;
+
+&lt;p&gt;Please reach out to me on &lt;a href=&quot;http://www.twitter.com/johnmcbride&quot;&gt;twitter&lt;/a&gt; or &lt;a href=&quot;http://www.github.com/johnmcbride&quot;&gt;github&lt;/a&gt; for any questions or suggestions and thanks for reading. Code on!&lt;/p&gt;
+
+&lt;p&gt;Post created on 2018-01-11T23:01:28-05:00&lt;/p&gt;
+</description>
+				<pubDate>Thu, 11 Jan 2018 00:00:00 -0500</pubDate>
+				<link>/2018/01/11/11-01-28.html</link>
+				<guid isPermaLink="true">/2018/01/11/11-01-28.html</guid>
+			</item>
+		
+			<item>
+				<title>Accessing the kubernetes API when using minikube</title>
+				<description>&lt;p&gt;I have recently been working on building some tools using the kubernetes API. To enable this develoment locally I am running kubernetes using &lt;a href=&quot;https://github.com/kubernetes/minikube&quot;&gt;minikube&lt;/a&gt;. If you haven’t check this out yet and want to learn kubernetes, this is an awesome local environment to get started with.&lt;/p&gt;
+
+&lt;p&gt;The issue is, when running minikube, how do you access the kubernetes API since the API server is not accessible to any environment outside the kubernetes cluster? For Example, if the k8s api server IP address is 10.96.0.1 and you would like to access the swagger endpoint. You would try http(s)://10.96.0.1/swaggerapi but you come across this…
+&lt;a href=&quot;../images/2017-12-16-00/kube-api-error.png&quot;&gt;endpoint error&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe it’s the minikube host IP that we should access. Assuming our host IP address is 192.168.64.8, let’s try to access the swagger api endpoint using the host IP.
+&lt;a href=&quot;../images/2017-12-16-00/kubeapi-unavailable.png&quot;&gt;host error&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, both methods we have tried are unsucessful, so what’s next? It turns out that kubernetes has a proxy option on the kubectl CLI (command line interface) that will help you expost the API endpoint to the local host. If you execute the proxy command you will create a proxy for the kubernetes services that you will be able to access from your localhost.&lt;/p&gt;
+
+&lt;p&gt;execute the following&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;kubectl proxy&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and you should see
+&lt;a href=&quot;../images/2017-12-16-00/proxy-starting.png&quot;&gt;proxy starting…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we have the proxy started (note that it is listening on port 8001) we should be able to access the api endpoints from our localhost. For example, if our localhost IP address is 192.168.64.8 and the proxy server is running, you should be able to access the swagger api endpoint like this, http(s)://192.168.64.8:8001/swaggerapi&lt;/p&gt;
+
+&lt;p&gt;and indeed we can!
+&lt;a href=&quot;../images/2017-12-16-00/kubeapi-swagger.png&quot;&gt;swagger success&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we can access the kubernetes API server from localhost, we can start developing with the API without having to spin up a shiney new linux environment. ;)&lt;/p&gt;
+
+&lt;p&gt;As always feel free to reach out to me on &lt;a href=&quot;http://twitter.com/johnmcbride&quot;&gt;twitter&lt;/a&gt; for any questions or suggestions.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 16 Dec 2017 00:00:00 -0500</pubDate>
+				<link>/2017/12/16/00.html</link>
+				<guid isPermaLink="true">/2017/12/16/00.html</guid>
+			</item>
+		
+			<item>
 				<title>Introduction to the Citrix Developer extension for Visual Studio</title>
 				<description>&lt;p&gt;We are working on some updates to the Citrix Developer extension for Visual Studio to include some additional 
 samples and in lieu of those updates I wanted to repost our introduction video I put together that goes over the 
@@ -198,74 +318,6 @@ within visual studio by searching for XenServer or by clicking on the &lt;a href
 				<pubDate>Mon, 10 Dec 2012 00:00:00 -0500</pubDate>
 				<link>/2012/12/10/21-10-09.html</link>
 				<guid isPermaLink="true">/2012/12/10/21-10-09.html</guid>
-			</item>
-		
-			<item>
-				<title>Setting Content-Type header for an HTTP Post in Win8 Store App</title>
-				<description>&lt;p&gt;&amp;lt;In a recent project I was playing around with a Windows 8 Store app (formally known as Metro) and needed to 
-POST some info to an REST based endpoint. The issue was I needed to set the Content-Type header to application/json 
-to the API knew how to serialize the incoming data.  Having not used the HttpClient object recently it took a little 
-research to find how to set the Content-Type header. Its turns out this is pretty easy. Basically every HttpContent 
-object has a .Headers property, which contains a property for most of the popular https headers, Content-Type being 
-the one I was most interested in.&lt;/p&gt;
-
-&lt;p&gt;So how do you set it? It turns out that for any header property that you want to set, you use the MediaTypeHeaderValue 
-object and pass in the value you want.&lt;/p&gt;
-
-&lt;p&gt;For example&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContentType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaTypeHeaderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;application/json&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;would set the Content-Type header value to be “application/json”.&lt;/p&gt;
-
-&lt;p&gt;Below is a more complete example of how to set the Content-Type header along with creating content for the 
-body of the post, etc.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://[Your POST api method]&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//define that we are the body of the post will be string content. In our care&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//if will be JSON&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;HttpContent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{field1:&amp;#39;myvalue&amp;#39;,field2:&amp;#39;field2&amp;#39;}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//set the content type header to be &amp;quot;application/json&amp;quot;. We do this by setting the&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//content-type property to application/json by initializing a new object called&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//MediaTypeHeaderValue and passing what value we want to set the content-type header to be.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContentType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MediaTypeHeaderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;application/json&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//init the httpclient&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_client&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//post the data to the API. Note for Win8, we are using the async/await paradigme&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//so as not to block the ui thread.&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_resp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PostAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_bodyContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//get the response from the api. In our case we assume that the data coming back will be string&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Note for Win8, we are using the async/await paradigme&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//so as not to block the ui thread.&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReadAsStringAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-				<pubDate>Wed, 07 Nov 2012 00:00:00 -0500</pubDate>
-				<link>/2012/11/07/16-02-45.html</link>
-				<guid isPermaLink="true">/2012/11/07/16-02-45.html</guid>
-			</item>
-		
-			<item>
-				<title>HOW TO- Convert .pem file to a .der file with OpenSSL</title>
-				<description>&lt;p&gt;Recently I have the need to convert an SSL cert I retrieved from a Citrix NetScaler device from the 
-native format, .pem, into a format that was more digestible to Windows Server. In order to do this you’ll 
-need the OpenSSL library for windows. You can find it at &lt;a href=&quot;http://slproweb.com/products/Win32OpenSSL.html&quot;&gt;http://slproweb.com/products/Win32OpenSSL.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you have it installed, make sure you run the following command to setup the config file in your 
-command prompt. Remember to replace the [openssl install directory] with the location you installed OpenSSL
-“set OPENSSL_CONF=c:[openssl install directory]binopenssl.cfg”  Once you have all that set you can run the 
-following command to convert the .pem file to a .der file “openssl x509 –in [your pem file].pem –out [full path and filename of the file you want to create].der –outform DER”&lt;/p&gt;
-
-&lt;p&gt;This will convert your .pem file to a .der file which you can now import into a Windows Server.&lt;/p&gt;
-
-&lt;p&gt;Hope this helps.&lt;/p&gt;
-</description>
-				<pubDate>Thu, 26 Jul 2012 00:00:00 -0400</pubDate>
-				<link>/2012/07/26/21-10-40.html</link>
-				<guid isPermaLink="true">/2012/07/26/21-10-40.html</guid>
 			</item>
 		
 	</channel>

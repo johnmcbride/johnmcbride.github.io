@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>dev:snack YouTube series - Octoblu and Visual Studio</title>
+	<title>Vue.JS Quickstart (With no build tools)</title>
 	
 	<meta name="author" content="John McBride">
 
@@ -305,7 +305,7 @@
 
 	<div class="col-sm-9 col-sm-offset-3">
 		<div class="page-header">
-  <h1>dev:snack YouTube series - Octoblu and Visual Studio </h1>
+  <h1>Vue.JS Quickstart (With no build tools) </h1>
 </div>
 <article>
 	
@@ -313,32 +313,102 @@
 	<div class="col-sm-10">
 		<ul class="tags">
   
-    <li><a href="/tags.html#Citrix-ref" class="tag">Citrix</a></li>
+    <li><a href="/tags.html#dev-ref" class="tag">dev</a></li>
   
-    <li><a href="/tags.html#YouTube-ref" class="tag">YouTube</a></li>
+    <li><a href="/tags.html#vue-ref" class="tag">vue</a></li>
   
-    <li><a href="/tags.html#Developer-ref" class="tag">Developer</a></li>
+    <li><a href="/tags.html#javascript-ref" class="tag">javascript</a></li>
   
 </ul>
 	 <span class="post-date">
 	   
-	   November 
-	   29th,
+	   January 
+	   11th,
 	   
-	   2015
+	   2018
 		 
 	 </span>
 	 
 	  <div class="article_body">
-	  <p>In this Dev:snack edition, we highligh some of the new features we have included in the Citrix Developer Extension
-for Visual Studio that target the Citrix Octoblu platform. We go over items like new samples and some additional
-tool windows that are included to help you work with Octoblu.you would like to see.</p>
+	  <p>Recently I have been building a cross platform application based on the <a href="http://electron.atom.io">electron
+shell</a>. Part of this process has been my effort to learn
+some front-end frameworks like <a href="https://vuejs.org/">VueJs</a>, <a href="https://reactjs.org/">React</a> and <a href="https://angular.io/">Angular</a> to build out the UI for the electron application. For this particular application, I have decided to focus
+on learning the VueJs framework.</p>
 
-<p>Check out the video below.</p>
+<p>The one thing that each of these frameworks have in common is the use of build tools to merge, transpile and package a site into a working/debuggable artifcat. Because of these build tools it sometimes takes away from learning the actual framework at the basic level, but instead, spend time learning the build system just to make it work.</p>
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/uUEsdVSKe6U" frameborder="0" allowfullscreen=""></iframe></div>
+<p>There are a ton of great examples out there but generally they all use some build tools to get the sample up and running, I would like to distill a quick start down to the simplest version and try not to use any build tools to get it working.</p>
 
+<p>Let’s get started.</p>
+
+<p>In a blank directory create a file called index.html and paste the following html into the page. This is basic html page, nothing else.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>VueJs Manual<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>Now that we have our base HTML page, let add VueJs to the page. The easiest way to do this is to pull the VueJs script from a CDN (content delivery network), and we can do that but simeply adding a script tag to the &lt;head&gt; section of our index.html page. (I’ve added the whole HTML markup here, but you can just add the script tag.)</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>VueJs Manual<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/vue&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>Now that we have VueJs loaded, let’s doing something with it.</p>
+
+<p>First, we should add a HTML heading element to the body section and name it “my heading”.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myheading&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>The next item we need to figure out how to insert text into this heading element. Well VueJs has a template that we can use that is defined with curley braces. For example “”. These are typically know as mustaches.
+When we add that our element now looks like this.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myheading&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>This says that VueJs will set a variable called message on it’s data object and then replace the “” template with that variables value.</p>
+
+<p>Now that we have that, we need to create the VueJs instance and data object. In order to do that, we need to add an additional <script></script> to the end of the body element in our HTML page. Below is the full page that has the h2 heading and the VueJs script. Let’s break it down tp understand what is going on.</p>
+
+<p>In the <script></script> tag we are declaring a “mainVue” variable and creating a new Vue instance. In the Vue constructure there is a “el” prop. This is css selector for the “element” that should be selected and assigned the data object. Remember, if there are multiple elements this data will be propagated to all of them.</p>
+
+<p>Now there also the  data object, here is where we can define what our data looks like. In this example, the data object contains a property called “message”. As you can see this will be mapped to the  template defined on the H2 tag. This will populate the  with “this is my test” value. Awesome!</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>VueJs Manual<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/vue&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myheading&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+       <span class="kd">var</span> <span class="nx">mainVue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+           <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#myheading&#39;</span><span class="p">,</span>
+           <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+               <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;this is my test&quot;</span>
+           <span class="p">}</span>
+       <span class="p">});</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>There are alot of examples out there that use build tools to get alot of this working, but this example is purley meant to create the smalles and succinct understanding of how to get started with VueJs (without build tools). This was one of my stumbling blocks when trying to learn this and it helped me in breaking down this into just the required pieces. There is alot more that you can do will build tools and alot of samples out there can help with that.</p>
+
+<p>Please reach out to me on <a href="http://www.twitter.com/johnmcbride">twitter</a> or <a href="http://www.github.com/johnmcbride">github</a> for any questions or suggestions and thanks for reading. Code on!</p>
+
+<p>Post created on 2018-01-11T23:01:28-05:00</p>
 
 	  </div>
 
@@ -351,22 +421,22 @@ tool windows that are included to help you work with Octoblu.you would like to s
 		  
 			 
 				<li>
-					<a href="/tags.html#Citrix-ref">
-					Citrix <span>(2)</span>
+					<a href="/tags.html#dev-ref">
+					dev <span>(1)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="/tags.html#YouTube-ref">
-					YouTube <span>(2)</span>
+					<a href="/tags.html#vue-ref">
+					vue <span>(1)</span>
 					,
 					</a>
 				</li>
 			 
 				<li>
-					<a href="/tags.html#Developer-ref">
-					Developer <span>(2)</span>
+					<a href="/tags.html#javascript-ref">
+					javascript <span>(1)</span>
 					
 					</a>
 				</li>
@@ -381,7 +451,7 @@ tool windows that are included to help you work with Octoblu.you would like to s
 		<div>
       <section class="share col-sm-6">
         <h4 class="section-title">Share Post</h4>
-        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=dev:snack YouTube series - Octoblu and Visual Studio&via=johnmcbride"
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=Vue.JS Quickstart (With no build tools)&via=johnmcbride"
            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter fa-lg"></i>
           Twitter
@@ -409,10 +479,10 @@ tool windows that are included to help you work with Octoblu.you would like to s
 
 		<ul class="pager">
 		  
-		  <li class="previous"><a href="/2015/11/29/03-31-07-01.html" title="Developer YouTube series - bite sized snacks of developer information">&larr; Previous</a></li>
+		  <li class="previous"><a href="/2017/12/16/00.html" title="Accessing the kubernetes API when using minikube">&larr; Previous</a></li>
 		  
 		  
-		  <li class="next"><a href="/2016/02/06/03-31-09.html" title="Introduction to the Citrix Developer extension for Visual Studio">Next &rarr;</a></li>
+			<li class="next disabled"><a>Next &rarr;</a>
 		  
 		</ul>
 

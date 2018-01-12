@@ -332,7 +332,7 @@ file you need to modify. If you open the file applicationhost.config in your fav
 specific site you want to enable IP http access on. It’ll look something like the 
 following, you’ll have for your specific site but it should be listed in the sites XML element.</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;site</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="na">name=</span><span class="s">&quot;MyApiSite&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span></span><span class="nt">&lt;site</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="na">name=</span><span class="s">&quot;MyApiSite&quot;</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;application</span> <span class="na">applicationpool=</span><span class="s">&quot;Clr4IntegratedAppPool&quot;</span> <span class="na">path=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
         	<span class="nt">&lt;virtualdirectory</span> <span class="na">path=</span><span class="s">&quot;/&quot;</span> <span class="na">physicalpath=</span><span class="s">&quot;C:DevMyApiSite&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;/application&gt;</span>
@@ -344,7 +344,7 @@ following, you’ll have for your specific site but it should be listed in the s
 <p>Once you find your specific site, you’re going to want to change the “<binding>" element line 
 and remove the "localhost" item from the line. Check out the adjusted line hilighted below!</binding></p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;site</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="na">name=</span><span class="s">&quot;MyApiSite&quot;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span></span><span class="nt">&lt;site</span> <span class="na">id=</span><span class="s">&quot;7&quot;</span> <span class="na">name=</span><span class="s">&quot;MyApiSite&quot;</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;application</span> <span class="na">applicationpool=</span><span class="s">&quot;Clr4IntegratedAppPool&quot;</span> <span class="na">path=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
 		<span class="nt">&lt;virtualdirectory</span> <span class="na">path=</span><span class="s">&quot;/&quot;</span> <span class="na">physicalpath=</span><span class="s">&quot;C:DevMyApiSite&quot;</span> <span class="nt">/&gt;</span>
 	<span class="nt">&lt;/application&gt;</span>
@@ -418,7 +418,7 @@ and remove the "localhost" item from the line. Check out the adjusted line hilig
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

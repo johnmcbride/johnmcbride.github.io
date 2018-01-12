@@ -316,6 +316,112 @@
 </ul>
   <span class="post-date">
     
+    November
+    7th,
+    
+    2012
+  </span>
+
+  <h2>
+    <a href="/2012/11/07/16-02-45.html">Setting Content-Type header for an HTTP Post in Win8 Store App</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>&lt;In a recent project I was playing around with a Windows 8 Store app (formally known as Metro) and needed to 
+POST some info to an REST based endpoint. The issue was I needed to set the Content-Type header to application/json 
+to the API knew how to serialize the incoming data.  Having not used the HttpClient object recently it took a little 
+research to find how to set the Content-Type header. Its turns out this is pretty easy. Basically every HttpContent 
+object has a .Headers property, which contains a property for most of the popular https headers, Content-Type being 
+the one I was most interested in.</p>
+
+<p>So how do you set it? It turns out that for any header property that you want to set, you use the MediaTypeHeaderValue 
+object and pass in the value you want.</p>
+
+<p>For example</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span><span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">)</span></code></pre></figure>
+
+<p>would set the Content-Type header value to be “application/json”.</p>
+
+<p>Below is a more complete example of how to set the Content-Type header along with creating content for the 
+body of the post, etc.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span><span class="kt">string</span> <span class="n">URL</span> <span class="p">=</span> <span class="s">&quot;http://[Your POST api method]&quot;</span><span class="p">;</span>
+<span class="c1">//define that we are the body of the post will be string content. In our care</span>
+<span class="c1">//if will be JSON</span>
+<span class="n">HttpContent</span> <span class="n">_bodyContent</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="s">&quot;{field1:&#39;myvalue&#39;,field2:&#39;field2&#39;}&quot;</span><span class="p">);</span>
+<span class="c1">//set the content type header to be &quot;application/json&quot;. We do this by setting the</span>
+<span class="c1">//content-type property to application/json by initializing a new object called</span>
+<span class="c1">//MediaTypeHeaderValue and passing what value we want to set the content-type header to be.</span>
+<span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+
+<span class="c1">//init the httpclient</span>
+<span class="n">HttpClient</span> <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">();</span>
+
+<span class="c1">//post the data to the API. Note for Win8, we are using the async/await paradigme</span>
+<span class="c1">//so as not to block the ui thread.</span>
+<span class="kt">var</span> <span class="n">_resp</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">PostAsync</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="n">_bodyContent</span><span class="p">);</span>
+
+<span class="c1">//get the response from the api. In our case we assume that the data coming back will be string</span>
+<span class="c1">// Note for Win8, we are using the async/await paradigme</span>
+<span class="c1">//so as not to block the ui thread.</span>
+<span class="kt">var</span> <span class="n">a</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_resp</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span></code></pre></figure>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    July
+    26th,
+    
+    2012
+  </span>
+
+  <h2>
+    <a href="/2012/07/26/21-10-40.html">HOW TO- Convert .pem file to a .der file with OpenSSL</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>Recently I have the need to convert an SSL cert I retrieved from a Citrix NetScaler device from the 
+native format, .pem, into a format that was more digestible to Windows Server. In order to do this you’ll 
+need the OpenSSL library for windows. You can find it at <a href="http://slproweb.com/products/Win32OpenSSL.html">http://slproweb.com/products/Win32OpenSSL.html</a></p>
+
+<p>Once you have it installed, make sure you run the following command to setup the config file in your 
+command prompt. Remember to replace the [openssl install directory] with the location you installed OpenSSL
+“set OPENSSL_CONF=c:[openssl install directory]binopenssl.cfg”  Once you have all that set you can run the 
+following command to convert the .pem file to a .der file “openssl x509 –in [your pem file].pem –out [full path and filename of the file you want to create].der –outform DER”</p>
+
+<p>This will convert your .pem file to a .der file which you can now import into a Windows Server.</p>
+
+<p>Hope this helps.</p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
     July
     23rd,
     
@@ -372,25 +478,25 @@ Visual Studio. <img src="images/image.png" alt="VS" /></p>
 <p>Now, assuming you are the default Visual Studio Development Server and you run your project right away 
 you’ll have a false sense of security that your project is all set and ready to go, like the following. All 
 looks good right?
-<img src="/images/image1.png" alt="Image 1" /></p>
+<img src="http://localhost:4000/images/image1.png" alt="Image 1" /></p>
 
 <p>If you dig a little deeper, and set your project to use IIS express, like the following (If you don’t have 
 IIS Express you can download it via the Web Platform Installer, or by downloading Web Matrix, which will get you 
 IIS Express by default).
-<img src="/images/image2.png" alt="Image 2" /></p>
+<img src="http://localhost:4000/images/image2.png" alt="Image 2" /></p>
 
 <p>then try to debug your project you all of a sudden see an error about stating that you have a duplicate 
 section defined in your web.config file. 
-<img src="/images/image3.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image3.png" alt="Image 3" /></p>
 
 <p>So what’s the problem? It turns out that when we added the <a href="http://www.nuget.org" target="_blank">nuget</a> package for DotNetOpenAuth, 
 the package also adds a line to our project web.config like the following.
-<img src="/images/image4.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image4.png" alt="Image 3" /></p>
 
 <p>However, if you take a quick look at the machine.config for the .NET 4 framework located at the following location 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config you’ll see that there is a section alreay defined in the 
 machine.config like the following. This is what is causing the conflict here.
-<img src="/images/image5.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image5.png" alt="Image 3" /></p>
 
 <p>So what’s the resolution? It’s pretty simple actually, you can either remove of comment out the &lt;section&gt; 
 line in the project web.config and everything should be back to normal.</p>
@@ -432,65 +538,6 @@ downloaded it yet to verify. If you have feel free to leave me a comment below.<
 
 </article>
 
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    March
-    16th,
-    
-    2011
-  </span>
-
-  <h2>
-    <a href="/2011/03/16/16-01-33.html">Another good video introduction to Reactive Extensions</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>Here is another good introduction video to Reactive extensions for .NET by Eric Meijer, all in 15 minutes 
-<img style="border-bottom-style: none; border-left-style: none; border-top-style: none; border-right-style: none" class="wlEmoticon wlEmoticon-smile" alt="Smile" src="http://www.johnmcbride.me/wp-content/uploads/2011/03/wlEmoticon-smile1.png" /></p>
-<p><object type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="512" height="288">
-<param name="minRuntimeVersion" value="4.0.50401.0" /><param name="source" value="http://channel9.msdn.com/scripts/Channel9.xap?v=1.5" /><param name="initParams" value="mediaurl=http://ecn.channel9.msdn.com/o9/ch9/0/6/1/4/0/5/ErikMeijerRxIn15_ch9.wmv,thumbnail=http://ecn.channel9.msdn.com/o9/ch9/0/6/1/4/0/5/ErikMeijerRxIn15_512_ch9.png,deliverymethod=progressivedownload,autoplay=false,entryid=d6937e451ef44c3991339dea00ca1fed" /></object></p>
-
-    
-    
-  </div>
-
-</article>
-
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    March
-    15th,
-    
-    2011
-  </span>
-
-  <h2>
-    <a href="/2011/03/15/20-42-15.html">Good video on Reactive Extension for .NET</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>Recently I have been working on a Windows Phone app and starting to look into the Reactive extension for .NET. NHere is a good over video from DevCamp 2010 by Bart de Smet.  <br />  <br /><object type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="512" height="288"><param name="minRuntimeVersion" value="4.0.50401.0" /><param name="source" value="http://channel9.msdn.com/scripts/Channel9.xap?v=1.5" /><param name="initParams" value="mediaurl=http://ecn.channel9.msdn.com/o9/ch9/4d56/91d0ae4f-e2fb-44b7-8a38-9e25011e4d56/dc2010keynote_ch9.wmv,thumbnail=http://ecn.channel9.msdn.com/o9/ch9/4d56/91d0ae4f-e2fb-44b7-8a38-9e25011e4d56/dc2010keynote_512_ch9.jpg,deliverymethod=progressivedownload,autoplay=false,entryid=91d0ae4fe2fb44b78a389e25011e4d56" /></object></p>
-
-    
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -521,7 +568,7 @@ downloaded it yet to verify. If you have feel free to leave me a comment below.<
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

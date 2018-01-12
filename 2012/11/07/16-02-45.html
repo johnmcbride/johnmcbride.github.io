@@ -336,14 +336,14 @@ object and pass in the value you want.</p>
 
 <p>For example</p>
 
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span><span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">)</span></code></pre></figure>
 
 <p>would set the Content-Type header value to be “application/json”.</p>
 
 <p>Below is a more complete example of how to set the Content-Type header along with creating content for the 
 body of the post, etc.</p>
 
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">string</span> <span class="n">URL</span> <span class="p">=</span> <span class="s">&quot;http://[Your POST api method]&quot;</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span></span><span class="kt">string</span> <span class="n">URL</span> <span class="p">=</span> <span class="s">&quot;http://[Your POST api method]&quot;</span><span class="p">;</span>
 <span class="c1">//define that we are the body of the post will be string content. In our care</span>
 <span class="c1">//if will be JSON</span>
 <span class="n">HttpContent</span> <span class="n">_bodyContent</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="s">&quot;{field1:&#39;myvalue&#39;,field2:&#39;field2&#39;}&quot;</span><span class="p">);</span>
@@ -427,7 +427,7 @@ body of the post, etc.</p>
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

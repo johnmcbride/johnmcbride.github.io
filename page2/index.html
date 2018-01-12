@@ -316,6 +316,83 @@
 </ul>
   <span class="post-date">
     
+    November
+    24th,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/24/03-52-08.html">VS Extension to reset the Experimental Visual Studio Instance</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>In developing some extensions I grew increasing tired of having to manually reset the experimental instance of 
+Visual Studio. You typically do this by deleting the required files in the AppData directory as well as the “Exp” 
+key in the registry.</p>
+
+<p>Having to do this multiple times during some testing I wrote an extension and open sourced it that cleanly resets 
+the experimental install of visual studio.</p>
+
+<p>You can grab the extension on the Visual Studio Gallery <a href="https://visualstudiogallery.msdn.microsoft.com/70cf0f85-0c8e-4970-87d3-d0fc4bcb9a01">here</a></p>
+
+<p>If you would like to follow the source on Github, check out <a href="https://github.com/johnmcbride/CleanHiveAndDebugExtension">project here</a></p>
+
+<p><img src="images/cleanhiveproject.png" alt="Project Image" /></p>
+
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    November
+    22nd,
+    
+    2015
+  </span>
+
+  <h2>
+    <a href="/2015/11/22/01-39-33.html">Live coding sesssion - Octoblu/Citrix and .NET</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>We’ve recently added some new updates to the Citrix Developer Extension for Visual Studio to show off some of the 
+feature of the Citrix Octoblu platform. To show off show of the features I put together this Live Coding session to 
+show how to build a sample app that registers an application with meshblu using the meshblu API and building a 
+workflow to send message to that application via web sockets, all with .NET. You can get more information on the 
+<a href="https://visualstudiogallery.msdn.microsoft.com/6587c715-fff3-4e2b-bf7f-10331840c552">Citrix Developer Extension for Visual Studio here</a></p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/eT92moezKic" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p> </p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
     July
     15th,
     
@@ -471,112 +548,6 @@ within visual studio by searching for XenServer or by clicking on the <a href="h
 
 </article>
 
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    November
-    7th,
-    
-    2012
-  </span>
-
-  <h2>
-    <a href="/2012/11/07/16-02-45.html">Setting Content-Type header for an HTTP Post in Win8 Store App</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>&lt;In a recent project I was playing around with a Windows 8 Store app (formally known as Metro) and needed to 
-POST some info to an REST based endpoint. The issue was I needed to set the Content-Type header to application/json 
-to the API knew how to serialize the incoming data.  Having not used the HttpClient object recently it took a little 
-research to find how to set the Content-Type header. Its turns out this is pretty easy. Basically every HttpContent 
-object has a .Headers property, which contains a property for most of the popular https headers, Content-Type being 
-the one I was most interested in.</p>
-
-<p>So how do you set it? It turns out that for any header property that you want to set, you use the MediaTypeHeaderValue 
-object and pass in the value you want.</p>
-
-<p>For example</p>
-
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">)</span></code></pre></figure>
-
-<p>would set the Content-Type header value to be “application/json”.</p>
-
-<p>Below is a more complete example of how to set the Content-Type header along with creating content for the 
-body of the post, etc.</p>
-
-<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">string</span> <span class="n">URL</span> <span class="p">=</span> <span class="s">&quot;http://[Your POST api method]&quot;</span><span class="p">;</span>
-<span class="c1">//define that we are the body of the post will be string content. In our care</span>
-<span class="c1">//if will be JSON</span>
-<span class="n">HttpContent</span> <span class="n">_bodyContent</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="s">&quot;{field1:&#39;myvalue&#39;,field2:&#39;field2&#39;}&quot;</span><span class="p">);</span>
-<span class="c1">//set the content type header to be &quot;application/json&quot;. We do this by setting the</span>
-<span class="c1">//content-type property to application/json by initializing a new object called</span>
-<span class="c1">//MediaTypeHeaderValue and passing what value we want to set the content-type header to be.</span>
-<span class="n">_bodyContent</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">ContentType</span> <span class="p">=</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">Http</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">MediaTypeHeaderValue</span><span class="p">(</span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
-
-<span class="c1">//init the httpclient</span>
-<span class="n">HttpClient</span> <span class="n">_client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">();</span>
-
-<span class="c1">//post the data to the API. Note for Win8, we are using the async/await paradigme</span>
-<span class="c1">//so as not to block the ui thread.</span>
-<span class="kt">var</span> <span class="n">_resp</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_client</span><span class="p">.</span><span class="n">PostAsync</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="n">_bodyContent</span><span class="p">);</span>
-
-<span class="c1">//get the response from the api. In our case we assume that the data coming back will be string</span>
-<span class="c1">// Note for Win8, we are using the async/await paradigme</span>
-<span class="c1">//so as not to block the ui thread.</span>
-<span class="kt">var</span> <span class="n">a</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_resp</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span></code></pre></figure>
-
-
-    
-    
-  </div>
-
-</article>
-
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    July
-    26th,
-    
-    2012
-  </span>
-
-  <h2>
-    <a href="/2012/07/26/21-10-40.html">HOW TO- Convert .pem file to a .der file with OpenSSL</a>
-  </h2>
-
-  <div>
-    
-    
-    <p>Recently I have the need to convert an SSL cert I retrieved from a Citrix NetScaler device from the 
-native format, .pem, into a format that was more digestible to Windows Server. In order to do this you’ll 
-need the OpenSSL library for windows. You can find it at <a href="http://slproweb.com/products/Win32OpenSSL.html">http://slproweb.com/products/Win32OpenSSL.html</a></p>
-
-<p>Once you have it installed, make sure you run the following command to setup the config file in your 
-command prompt. Remember to replace the [openssl install directory] with the location you installed OpenSSL
-“set OPENSSL_CONF=c:[openssl install directory]binopenssl.cfg”  Once you have all that set you can run the 
-following command to convert the .pem file to a .der file “openssl x509 –in [your pem file].pem –out [full path and filename of the file you want to create].der –outform DER”</p>
-
-<p>This will convert your .pem file to a .der file which you can now import into a Windows Server.</p>
-
-<p>Hope this helps.</p>
-
-    
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -607,7 +578,7 @@ following command to convert the .pem file to a .der file “openssl x509 –in 
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

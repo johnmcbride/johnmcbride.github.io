@@ -332,25 +332,25 @@ Visual Studio. <img src="images/image.png" alt="VS" /></p>
 <p>Now, assuming you are the default Visual Studio Development Server and you run your project right away 
 you’ll have a false sense of security that your project is all set and ready to go, like the following. All 
 looks good right?
-<img src="/images/image1.png" alt="Image 1" /></p>
+<img src="http://localhost:4000/images/image1.png" alt="Image 1" /></p>
 
 <p>If you dig a little deeper, and set your project to use IIS express, like the following (If you don’t have 
 IIS Express you can download it via the Web Platform Installer, or by downloading Web Matrix, which will get you 
 IIS Express by default).
-<img src="/images/image2.png" alt="Image 2" /></p>
+<img src="http://localhost:4000/images/image2.png" alt="Image 2" /></p>
 
 <p>then try to debug your project you all of a sudden see an error about stating that you have a duplicate 
 section defined in your web.config file. 
-<img src="/images/image3.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image3.png" alt="Image 3" /></p>
 
 <p>So what’s the problem? It turns out that when we added the <a href="http://www.nuget.org" target="_blank">nuget</a> package for DotNetOpenAuth, 
 the package also adds a line to our project web.config like the following.
-<img src="/images/image4.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image4.png" alt="Image 3" /></p>
 
 <p>However, if you take a quick look at the machine.config for the .NET 4 framework located at the following location 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config you’ll see that there is a section alreay defined in the 
 machine.config like the following. This is what is causing the conflict here.
-<img src="/images/image5.png" alt="Image 3" /></p>
+<img src="http://localhost:4000/images/image5.png" alt="Image 3" /></p>
 
 <p>So what’s the resolution? It’s pretty simple actually, you can either remove of comment out the &lt;section&gt; 
 line in the project web.config and everything should be back to normal.</p>
@@ -420,7 +420,7 @@ downloaded it yet to verify. If you have feel free to leave me a comment below.<
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>

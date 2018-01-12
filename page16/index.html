@@ -317,6 +317,85 @@
   <span class="post-date">
     
     June
+    17th,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/17/15-29-02.html">Firefox Version 3.0 is released today</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>Firefox 3.0 official release is today but it seems that the Mozilla site is having problems since i cannot download any add-ons for FF 3.0. :( I guess the world record for most downloads in a day is gonna have some problems.</p>
+<p>If you want the new version you can try to download <a href="http://www.spreadfirefox.com" target="_blank">from here</a></p>
+<p>I have found that while IE is my preferred browser that some of the development tools that Firefox provides via add-ons have become invaluable to me during my day to day development tasks. Things like Firbug (with the real-time editing) are indispensable when trying to figure out what SharePoint CSS I need to modify to get a specific look. When the site comes back up I’ll post the add-ons I use in my day to day development.</p>
+<p>FYI – Internet Explorer 8 is going to have some of more popular add-ons in their build as well. Last time I had checked, they had a developer (firbug’esk) feature that allows you to do in place editing to see what a page looks like as you make modifications to it.</p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
+    13th,
+    
+    2008
+  </span>
+
+  <h2>
+    <a href="/2008/06/13/15-40-07.html">Getting Visual Studio Extension for SharePoint 1.2 running on 64bit machines.</a>
+  </h2>
+
+  <div>
+    
+    
+    <p>So I have to say that I was pumped up when Microsoft released the new 1.2 extensions for SharePoint (with Visual Studio 2008 support), but then had the air taken out of me when I went to run the extension setup only to find that it was not support on a 64bit platform. Now I have to get on my soapbox here a little and say that, with Microsoft pushing extremely hard the 64bit architecture I find it a little puzzling that they wouldn't release a 64 bit version of these tools. If you think about it, they have 64bit versions of SharePoint, and to now, if you were doing any SharePoint dev you are typically going to have a whole SharePoint rig locally for testing purposes. So again I ask, why wouldn't Microsoft release a 64bit version of these tools?</p>
+<p>Ok, enough of the soap box, on to the meat of this post, actually getting the toolset to install (and mostly work) on a 64bit machine. <u>NOTE: This is not officially supported and I have not fully tested debugging yet, so please use at your own risk.</u></p>
+<p>In order to do this you will need to download the <a href="http://www.brentnorris.net/orca.msi">ORCA msi editor available here.</a>     <br /><strong><u>Step 1.</u></strong> Download the VseWss12.exe from Microsoft site. You can get it here.</p>
+<p><u><strong>Step 2.</strong></u> In&#160; a command prompt window, navigation to the directory where you downloaded the extensions. Once there you will need to extract MSI from the executable you downloaded. You can do that with the following command</p>
+<p>VSeWSSv12.exe /extract:c:extractedVSE</p>
+<p><strong><u>Step 3.</u></strong> Once extracted, you will notice that there should be a file named VSeWSSv12.msi in your extracted location. This is not the file that we will be running through ORCA to remove some of the 64 bit dependencies.</p>
+<p><strong><u>Step 4.</u></strong> Start ORCA.exe and open the file VSeWSSv12.msi from the extracted location.</p>
+<p><strong><u>Step 5.</u></strong> Once the msi is loaded into ORCA you should see the following.</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image17.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="145" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb20.png" width="244" border="0" /></a> </p>
+<p>&#160;<strong><u>Step 6.</u></strong> Navigate to the CustomAction node in the left hand column and select it. You should see the following     <br /><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image18.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="145" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb21.png" width="244" border="0" /></a> </p>
+<p><strong><u>Step 7.</u></strong> In order to get enable 64 bit installation you will need two delete two keys located in the Custom Actions key.     <br /><strong>a.</strong> Delete the X64System key shown on the right hand side of the application. (Shown below)</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image19.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="145" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb22.png" width="244" border="0" /></a> </p>
+<p><strong>b.</strong> Delete the WssNotInstalled key shown on the right hand side of the application. (Shown Below)</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image20.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="145" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb23.png" width="244" border="0" /></a> </p>
+<p><strong><u>Step 8.</u></strong> After deleting the specified key, you will need to save the changes back to the MSI. You can do this by Selecting the File-&gt;Save menu within the ORCA tool.</p>
+<p>Once you have saved the MSI you can now execute it like you would any MSI application. Here are some screen shots of the fully functioning VSeWSSv12 extension installation.</p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image21.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="191" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb24.png" width="244" border="0" /></a> </p>
+<p>&#160;<a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image22.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="191" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb25.png" width="244" border="0" /></a> </p>
+<p>&#160;<a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image23.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="191" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb26.png" width="244" border="0" /></a> </p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image24.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="191" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb27.png" width="244" border="0" /></a> </p>
+<p><a href="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image25.png"><img title="image" style="border-top-width: 0px; border-left-width: 0px; border-bottom-width: 0px; border-right-width: 0px" height="191" alt="image" src="http://www.sharepoint-stuff.com/wp-content/uploads/2008/06/image-thumb28.png" width="244" border="0" /></a></p>
+
+    
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+<ul class="tags">
+  
+</ul>
+  <span class="post-date">
+    
+    June
     12th,
     
     2008
@@ -409,69 +488,6 @@
 
 </article>
 
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    June
-    11th,
-    
-    2008
-  </span>
-
-  <h2>
-    <a href="/2008/06/11/11-50-36.html">I want a single place for all my applications…</a>
-  </h2>
-
-  <div>
-    
-    
-    <p></p>
-<p></p>
-<p>Why is it, that we cannot provide a single place for employee’s to get all of their applications? This is a question that I have been wrestling with for the past few years, and as more and more technologies crop up, this problem gets worse. If we think about it, the application classification determines where the user has to go launch (or see) the application. For the purposes of this posting I will group applications into three distinct groups</p>
-<ol>   <li>Locally installed applications. These are applications that are on the users device and are typically launched from the user’s start menu</li>    <li>Web Based Applications. Web applications that have no client component and are entirely browser based.</li>    <li>Delivered or hosted Applications. These are applications that typically run in a Citrix/Terminal server environment, where the user executes an application running on the server. </li> </ol>
-<p>Undoubtedly, if you work in a large enterprise, you will likely have at least two of the application classifications above, and probably will have all three. So, if we think about the scenario, if Maxwell Smart needs to start Word 2007, he goes to his start menu and finds MS Word and launches it. Now, if Max needs to to go to his web based HR system, he will probably launch his browser, go to his company portal (which has links to the web applications he has access to) and clicks on the link for his HR system, opening a new browser for him to accomplish his tasks. Finally, lets say Max needs to launch a clinical application hosted in a Citrix environment, well, in this instance he would most likely open up Citrix Program Neighborhood, find the application in the listing and the launch in from there. As you can see from this scenario, for the three different application classification, the user has three interfaces they have to go to in order to launch the applications. Why cant we provide them with the holy grail of a single interface? Shouldn’t users, at least those in the enterprise, have a single interface for all of their applications and not have to worry about figuring out where they need to go to launch an application? Up to this point i have not seen anyone try to provide a comprehensive approach to solving this problem and while their may be work-around's, like adding <a href="file://c:john.exe">file://c:john.exe</a> links to a SharePoint site, none of these are particularly enticing.    <br /></p>
-<p>Now I should probably make some clarifications here.</p>
-<ol>   <li> I know that Citrix/Terminal services has a web interface that can be integrated into SharePoint, but at a minimum, we are still talking two scenarios, not the holy grail of one. If your interested in the WISP webpart for citrix check it out here.</li>    <li>While I do have some experience with MS SMS I have not played around with the recently released version. The last version, thought, did not have a unified UI for displaying applications, the philosophy is to push applications/links into the start menu. </li> </ol>
-<p> So, since only bringing up a problem without a proposed solution doesn't bear much weight, I though I would put in my two cents for providing a better single interface for application delivery. The best as i can see it, this is really a two part problem, area #1 is displaying and application listing to the user. Since this blog is SharePoint focused, lets use SharePoint!!!.</p>
-
-    
-    
-  </div>
-
-</article>
-
-
-<article class="home">
-<ul class="tags">
-  
-</ul>
-  <span class="post-date">
-    
-    June
-    11th,
-    
-    2008
-  </span>
-
-  <h2>
-    <a href="/2008/06/11/10-55-14.html">Configuration steps for running SilverLight in Sharepoint 2007/WSS 3.0</a>
-  </h2>
-
-  <div>
-    
-    
-    
-
-    
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -502,7 +518,7 @@
 		<footer>
 			<hr/>
 			<p>
-				&copy; 2016 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
+				&copy; 2018 John McBride with <a href="http://jekyllrb.com/">Jekyll</a>. Theme: <a href="https://github.com/dbtek/dbyll">dbyll</a> by dbtek.
 			</p>
 		</footer>
 	</div>
