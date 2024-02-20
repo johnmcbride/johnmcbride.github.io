@@ -15,8 +15,8 @@ navbar-links:
   Blog: "/"
   My Resume: "resume"
   GitHub Projects:
-    - JWKS.Tools: /jwkstools
-    - Console.JWTParser: https://github.com/johnmcbride/console.jwtparser
+    - JWKS.Tools: /ghdocs/jwkstools
+    - Console.JWTParser: /ghdocs/jwtparser
     - UDAP Scopes: https://github.com/johnmcbride/udap.scopes
     - Citrix Script Packager: https://github.com/citrix/citrix-script-packager
     - Citrix Developer tools for Visual Studio Code: https://github.com/citrix/CitrixDeveloper-VSCode
