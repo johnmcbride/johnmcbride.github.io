@@ -5,7 +5,7 @@ group :jekyll_plugins do
     gem "jekyll-feed"
   end
 gem "webrick"
-gem "jekyll", ">= 6.0.1"
+gem "jekyll", ">= 4.3.3"
 gem "kramdown"
 gem "csv"
 
