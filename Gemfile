@@ -5,9 +5,9 @@ group :jekyll_plugins do
     gem "jekyll-feed"
   end
 gem "webrick"
-gem "jekyll", "= 3.9.5"
-gem "kramdown","2.4.0"
-gem "liquid","4.0.4"
+gem "jekyll", "= 4.3.3"
+gem "kramdown"
+gem "liquid"
 gem "csv"
 
 gem "jekyll-gist"
