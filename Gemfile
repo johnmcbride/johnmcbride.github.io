@@ -1,11 +1,12 @@
 source "https://rubygems.org"
 
-gem "github-pages","= 231", group: :jekyll_plugins
-group :jekyll_plugins do
-    gem "jekyll-feed"
-  end
+
 gem "webrick"
-gem "jekyll", "= 4.3.3"
+gem "jekyll", "~> 4.3.3"
+group :jekyll_plugins do
+  gem "jekyll-feed"
+end
+
 gem "kramdown"
 gem "liquid"
 gem "csv"
