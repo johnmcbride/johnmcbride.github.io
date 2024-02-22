@@ -2,6 +2,7 @@
 layout: projectdoc
 css:
     /assets/css/projectsdocs.css
+js: /assets/js/copymarkupcode.js
 ext-css:
     https://fonts.googleapis.com/icon?family=Material+Icons
 title: JWK(S) Tools and Generator CLI
@@ -109,10 +110,12 @@ Below are the arguments and options that can be used with the buildjwk command.
 ### Examples
 ```sh
 jwkstools buildjwk c:\cert\testcert.crt c:\jwkfiles\testcert.jwk --hash sha256
-
+```
+```sh
 jwkstools buildjwk c:\cert\testcert.crt c:\jwkfiles\testcert.jwk
 --display --sha1
-
+```
+```sh
 jwkstools buildjwk c:\cert\testcert.crt c:\jwkfiles\testcert.jwk --hash sha256 --overwrite
 ```
 
@@ -182,10 +185,11 @@ Below are the arguments and options that can be used with the buildjwks command.
 ### Examples
 ```sh
 jwkstools buildjwks c:\cert\testcert.crt c:\jwkfiles\testcert.jwk --hash sha256
-
-jwkstools buildjwks c:\certs\ c:\jwkfiles\testcert.jwk
---display --sha1
-
+```
+```sh
+jwkstools buildjwks c:\certs\ c:\jwkfiles\testcert.jwk --display --sha1
+```
+```sh
 jwkstools buildjwks c:\cert\testcert.crt c:\jwkfiles\testcert.jwk --hash sha256 --overwrite
 ```
 
@@ -247,9 +251,11 @@ Below are the arguments and options that can be used with the verifyjwks command
 ### Examples
 ```sh
 jwkstools verifyjwks c:\certs\ c:\jwkfiles\newfile.jwks
-
+```
+```sh
 jwkstools verifyjwks c:\certs\ c:\jwkfiles\newfile.jwks --hash sha1
-
+```
+```sh
 jwkstools verifyjwks c:\certs\ c:\jwkfiles\newfile.jwks --createnew --hash sha256 --overwrite
 ```
 

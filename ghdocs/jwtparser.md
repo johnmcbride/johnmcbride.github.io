@@ -4,6 +4,8 @@ css:
     /assets/css/projectsdocs.css
 ext-css:
     https://fonts.googleapis.com/icon?family=Material+Icons
+js:
+  - /assets/js/copymarkupcode.js
 title: JWT CLI Parser .NET Global Tool
 description: A .NET global tool to enable you to decode and create JWTs from the command line.
 show_downloads: true
@@ -34,7 +36,7 @@ I there are other web bases tools out there like [jwt.io](https://www.jwt.io/) t
 
 ## Installation
 you can install the tool as a global tool using the following .NET Commands
-```
+```sh
 dotnet tool install --global console.jwtparser
 ```
 
@@ -50,12 +52,18 @@ Parameters
 
 ### Examples
 
+
+```sh
 jwtconsole extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
 
+```sh
 jwtconsole extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c --pretty
+```
 
+```sh
 jwtconsole extract eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c -p
-
+```
 ### Developer Dependencies
 - System.IdentityModel.Tokens.Jwt
 - Spectre.Console.Cli
