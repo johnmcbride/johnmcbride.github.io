@@ -52,6 +52,35 @@ $hr-border-color: #eff0f1 !default;
   line-height: 1.5;
   color: $body-text-color;
 
+  
+pre[class*="highlight"] {
+  position: relative;
+  overflow: auto;
+
+  /* make space  */
+  margin: 5px 0;
+  padding: 1.75rem 0 1.75rem 1rem;
+  border-radius: 10px;
+}
+
+pre[class*="highlight"] button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  font-size: 0.9rem;
+  padding: 0.15rem;
+  background-color: #f8f8f8;
+  border: 1px solid #5e5e5e;
+  border-radius: 5px;
+  text-shadow: #c4c4c4 0 0 2px;
+}
+
+pre[class*="highlight"] button:hover {
+  cursor: pointer;
+  background-color: #bcbabb;
+}
+
 .linkbutton
 {
   display: inline-flex;
