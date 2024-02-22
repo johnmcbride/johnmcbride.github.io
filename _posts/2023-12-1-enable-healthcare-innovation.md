@@ -3,11 +3,11 @@ layout: post
 title: Enabling Healthcare innovation.
 subtitle: Embracing innovation,increasing development speed and focus on developers
 author: JohnM
-# cover-img: /assets/img/path.jpg
-# thumbnail-img: /assets/img/thumb.png
+cover-img: /assets/images/headers/healthcaretech-blue.png
+thumbnail-img: /assets/images/headers/healthcaretech-blue.png
 ---
 
-Having worked in both Tech and Healthcare I often wonder why healthcare can be slow at innovation. In tech I was part of an innovation team that consistently pushed the envelope with new tech, built demos for keynotes, advanced product ideas, tried greenfield ideas and pushed open source adoption/contribution.
+Having worked in both Tech and Healthcare I often wonder why healthcare can be slow at innovation. In tech I was part of an innovation team that consistently pushed the envelope with new tech, built demos for keynotes, advanced product ideas, tried greenfield ideas, pushed open source adoption/contribution and built developer advocacy.
 
 I'd like to think that the same could be done in the Healthcare space, but how? How can we enable innovation teams, early stage development and ideation in healthcare?
 
@@ -25,5 +25,5 @@ IMHO - I think there are a few areas to invest in
 
 - Instead of a "No, but" response to ideas, always try and provide a "Yes, and" answer to newer tech, ideas, etc. We did this lot when trying to bring new ideas to market, working with legal, open sourcing tools, etc. It provides a better base that will allow people to work from the spot of motivation and a "let's do this.." mindset
 
-andlast but not least, get away from healthcare specific communication tools. There are plently of standard tools now, discord, teams, slack, etc that have widespread adoption. **Use Them!!!**
+and last but not least, get away from healthcare specific communication tools. There are plently of standard tools now, discord, teams, slack, etc that have widespread adoption. **Use Them!!!**
 
