@@ -25,5 +25,4 @@ IMHO - I think there are a few areas to invest in
 
 - Instead of a "No, but" response to ideas, always try and provide a "Yes, and" answer to newer tech, ideas, etc. We did this lot when trying to bring new ideas to market, working with legal, open sourcing tools, etc. It provides a better base that will allow people to work from the spot of motivation and a "let's do this.." mindset
 
-I've seen alot of very specific get away from healthcare specific communication tools. There are plently of standard tools now, discord, teams, slack, etc that have widespread adoption. **Use Them!!!**
-
+I've seen alot of healthcare specific communication tools. There are plently of standard tools now, discord, teams, slack, etc that have widespread adoption. **Use Them!!!** as it brings in a whole additional set of developers that use them as part of their daily workflow.
