@@ -7,8 +7,10 @@ thumbnail-img: /assets/images/ipmextension/ipmactivitybar.png
 ---
 
 In some of my previous roles in developer advocacy I have built a few extension to help developers be a little more productive. A few of them are below and there are a few extension in the marketplace under my name (if interested)
-    - [Citrix Developer tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=CitrixDeveloper.citrixdeveloper-vscode)
-    - [Citrix Developer Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=CitrixDeveloper.CitrixDeveloperVisualStudioExtension)
+
+- [Citrix Developer tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=CitrixDeveloper.citrixdeveloper-vscode)
+
+- [Citrix Developer Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=CitrixDeveloper.CitrixDeveloperVisualStudioExtension)
 
 ## Project links
 
