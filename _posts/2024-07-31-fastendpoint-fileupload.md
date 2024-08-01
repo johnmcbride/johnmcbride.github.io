@@ -112,10 +112,10 @@ Now that the app is running we can test out the upload API. For this test we are
 
 Once you launch Thunder Client from VSCode, create a new request with the following settings
 
-Request Type: POST
-Request Url: http://localhost:port/uploaddemo
-Body: Check the File Check box.
-Body: Under the files section, select a file you would like to upload
+- Request Type: POST
+- Request Url: http://localhost:port/uploaddemo
+- Body: Check the File Check box.
+- Body: Under the files section, select a file you would like to upload
 
 Click the Send button.
 
