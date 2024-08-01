@@ -1,0 +1,13 @@
+@media (min-width: 1200px) {
+    .intro-header .page-heading h1 {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 768px) {
+    .post-preview .post-title {
+        font-size: 1.75rem;
+    }
+}
+h3 {
+    font-size: 1.35rem;
+}
