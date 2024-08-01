@@ -1,0 +1,24 @@
+---
+layout: page
+title: 'My Videos'
+css: "/assets/css/index.css"
+---
+<div class="list-filters">
+    <a href="/" class="list-filter">All posts</a>
+    <a href="/videos" class="list-filter filter-selected">Videos</a>
+    <a href="/tools" class="list-filter">Tools</a>
+    <a href="/tags" class="list-filter">Index</a>
+</div>
+
+<ul class="posts-list list-unstyled" role="list">
+{% for video in site.data.videos %}
+    <li class="post-preview">
+        <article>
+            <h2 class="post-title">{{ video.title }}</h2>
+            <h3 class="post-subtitle">{{ video.description }}</h3>
+            {% include youtube.html id=video.youtubeid %}
+        </article>
+    </li>
+{% endfor %}
+</ul>
+
