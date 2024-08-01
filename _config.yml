@@ -15,6 +15,7 @@ navbar-links:
   Blog: "/"
   My Resume: "resume"
   GitHub Projects:
+    - IPM Package Manager VSCode Extension: https://github.com/johnmcbride/ipm.explorer
     - JWKS.Tools: /ghdocs/jwkstools
     - Console.JWTParser: /ghdocs/jwtparser
     - UDAP Scopes: https://github.com/johnmcbride/udap.scopes
